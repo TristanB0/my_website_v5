@@ -1,35 +1,61 @@
+@font-face {
+    font-family: Segoe;
+    src: url(./assets/fonts/segoeui.ttf);
+}
+
+@font-face {
+    font-family: SegoeLight;
+    src: url(./assets/fonts/segoeuil.ttf);
+}
+
 body {
     background-color: #f2f2f2;
-    margin-left: 10%;
+    margin: 1% 10%;
+    /*margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
-    margin-bottom: 5%;
-
+    margin-bottom: 5%;*/
+    font-family: Segoe;
 }
 
-header, footer {
-    background-color: white;
-    border-radius: 33px;;
+header, footer, section {
+    background-color: #ffffff;
+    border-radius: 15px;;
     padding: 1em;
+    margin: 1em 0em;
 }
 
-header:hover, footer:hover {
+header:hover, footer:hover, section:hover {
     box-shadow: 0em 0em 1em black;
 }
 
-section {
-    padding: 1em;
+article {
+    text-align: justify;
 }
 
-h1, h3 {
+aside {
+    padding: 2%;
+}
+
+section.achievements {
+    position: inline-block;
+    width: auto;
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+h1, h2, h3 {
     color: black;
-}
-
-h2 {
-    color: gray;
 }
 
 
 a {
     color: #0074e5;
+}
+
+p.light {
+    font-family: SegoeLight;
 }
