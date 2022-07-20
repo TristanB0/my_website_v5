@@ -31,7 +31,7 @@ article {
 }
 
 .content > article {
-    flex: 60%;
+    flex: 70%;
 }
 
 .content {
@@ -44,12 +44,54 @@ article {
 
 .content > aside {
     display: flex;
-    flex: 40%;
-    padding-left: 2%;
+    flex: 25%;
+    margin-left: 20px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
+    border-radius: 15px;
+}
+
+.card-header {
+    background-color: #0078d4;
+    height: 9rem;
+    width: 100%;
+    margin-bottom: 3.5rem;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-image {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 3.5rem auto 0 auto;
+}
+
+.card-body {
+    padding: 1rem;
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.card-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-footer img {
+    width: 32px;
+    height: 32px;
+    margin: 0.5rem;
 }
 
 section.achievements {
@@ -79,14 +121,7 @@ header {
     width: 100%;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    float: right;
-    margin: auto 0 auto auto;
-}
-
-a.button, a.menu {
+a.button {
     display: block;
     color: #ffffff;
     background-color: #0078d4;
@@ -94,21 +129,14 @@ a.button, a.menu {
     padding: 0.5em;
     transition : color .15s ease-in-out, background-color .15s ease-in-out;
     text-align: center;
-}
-a.button:hover, a.menu:hover {
-    background-color: #0862ab;
-}
-a.button:focus, a.menu:focus {
-    background-color: #033e6c;
-}
-a.button {
     width: fit-content;
     margin-top: 0.5em;
 }
-a.menu {
-    width: 150px;
-    margin-left: 1em;
-    align-items: center;
+a.button:hover {
+    background-color: #0862ab;
+}
+a.button:focus {
+    background-color: #033e6c;
 }
 
 p.light {
@@ -123,6 +151,7 @@ footer p {
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
 
 @media (max-width: 768px) {
     body {
@@ -139,15 +168,8 @@ footer p {
         justify-content: space-around;
         align-items: center;
     }
-    nav {
-        float: none;
-        margin: auto;
-    }
     footer {
         margin-bottom: 0;
-    }
-    a.menu {
-        margin: 0.5em;
     }
     section.achievements {
         width: 100%;
@@ -160,7 +182,7 @@ footer p {
         display: flex;
         width: 100%;
     }
-    aside {
+    .content > aside {
         display: flex;
         flex: 100%;
         margin: auto;
