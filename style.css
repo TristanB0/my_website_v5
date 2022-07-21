@@ -163,8 +163,6 @@ footer p {
     header {
         margin-top: 0;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     }
