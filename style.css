@@ -26,6 +26,16 @@ header:hover, footer:hover, section:hover {
     transition: box-shadow .15s ease-in-out;
 }
 
+.project {
+    text-align: justify;
+}
+.project > img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 1em 0em;
+}
+
 article {
     text-align: justify;
 }
@@ -112,7 +122,7 @@ img.logo {
     height: 98px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: black;
 }
 
@@ -139,8 +149,9 @@ a.button:focus {
     background-color: #033e6c;
 }
 
-p.light {
+.light {
     font-family: SegoeLight;
+    font-weight: normal;
     margin: 0;
 }
 
