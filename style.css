@@ -29,11 +29,22 @@ header:hover, footer:hover, section:hover {
 #project {
     text-align: justify;
 }
-#project > img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    margin: 1em 0em;
+#project img {
+    display: block;
+    max-height: 500px;
+    border-radius: 5px;
+}
+#project figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+}
+#project figure {
+    border: 1px solid #dee2e6!important;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: fit-content;
+    margin: auto;
 }
 
 article {
@@ -133,7 +144,9 @@ img.logo {
 h1, h2, h3, h4 {
     color: black;
 }
-
+h1 {
+    margin-left: 16px;
+}
 h2 {
     margin-top: 0;
 }
@@ -141,6 +154,11 @@ h2 {
 header {
     display: inline-flex;
     width: 100%;
+}
+
+header > a {
+    display: inline-flex;
+    text-decoration: none;
 }
 
 a.button {
@@ -210,5 +228,18 @@ footer p {
     }
     .content article {
         flex: 100%;
+    }
+    #project img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin: auto;
+    }
+    #project figure {
+        border: 1px solid #dee2e6!important;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin: auto 0;
     }
 }
