@@ -31,6 +31,7 @@ header:hover, footer:hover, section:hover {
 }
 #project img {
     display: block;
+    width: auto;
     max-height: 500px;
     border-radius: 5px;
 }
