@@ -30,8 +30,7 @@ header:hover, footer:hover, section:hover {
     text-align: justify;
 }
 #project img {
-    display: block;
-    width: auto;
+    width: 100%;
     max-height: 500px;
     border-radius: 5px;
 }
