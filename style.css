@@ -16,7 +16,7 @@ body {
 
 header, footer, section {
     background-color: #ffffff;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 1em;
     margin: 1em 0em;
     box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
@@ -88,6 +88,7 @@ article {
     width: 120px;
     height: auto;
     margin: 3.5rem auto 0 auto;
+    border-radius: 15px;
 }
 
 .card-body {
@@ -171,6 +172,7 @@ a.button {
     text-align: center;
     width: fit-content;
     margin-top: 0.5em;
+    border-radius: 5px;
 }
 a.button:hover {
     background-color: #0862ab;
