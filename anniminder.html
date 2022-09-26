@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 	<head>
-		<title>Tristan BONY - Software Engineering Student</title>
+		<title>Tristan Bony - Software Engineering Student</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./style.css" />
@@ -12,18 +12,34 @@
 	<body>
 		<header>
 			<a href="./index.html">
-				<img src="./assets/images/Logo_TristanB_v3.jpg" alt="Tristan BONY" class="logo" />
-				<h1>Tristan BONY</h1>
+				<img src="./assets/images/Logo_TristanB_v3.jpg" alt="Tristan Bony" class="logo" />
+				<h1>Tristan Bony</h1>
 			</a>
 		</header>
 
         <section id="project">
 			<h2>Anniminder (Discord bot)</h2>
-            <!---->
+			<hr />
+			<p><a href="https://github.com/TristanB0/Anniminder_Discord_bot">Link to the GitHub of the project.</a></p>
+			<p>This project is a reminder of anniversaries for Discord servers.</p>
+            <p>I started this project when I found people were missing other people's birthday because they were storing it in plain text in a dedicated channel and often people were missing it.</p>
+			<p>I used Python for the base of the project (with discord.py API wrapper) and SQL to store data in a SQLite database.</p>
+			<p>The usage of the bot is very basic since it uses Discord slash commands.<br />
+			When the bot is added in a new server, an ephemeral message is sent which explains how the bot works. (Yet to be done) <br />
+			Moreover, when a new user joins a server with Anniminder in it, he will receive a private message to be informed of the functioning of the bot.</p>
+			<p>To resume the available commands:
+			<ul>
+				<li><i>/help</i> shows the help command with every information</li>
+				<li><i>/set_channel [channel]</i> is used to defined a specific channel to sent birthday messages in (available only to administrator)</li>
+				<li><i>/add_birthday [year] [month] [day]</i> is used by the users to add or modify their birthday. A confirmation is sent afterward as an ephemeral message</li>
+				<li><i>/remove_birthday</i> can be used by a user who no longer wants to be stored</li>
+				<li><i>/get_birthday [user]</i> is used by anyone who wants to know the birthday of someone else</li>
+			</ul></p>
+			<p>Finally, when a bot is deleted from a server or when a user leaves a server, every information related to them is removed.</p>
         </section>
         
         <footer>
-			<p>&copy; <span id="year"></span> Tristan BONY</p>
+			<p>&copy; <span id="year"></span> Tristan Bony</p>
 		</footer>
 
 		<script src="./script.js"></script>
