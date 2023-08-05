@@ -23,13 +23,16 @@ const cardTitle = (cat: string) => {
 const { category, image, title, description, href } = Astro.props;
 ---
 
-<section class="rounded-xl shadow bg-white border w-[33%] p-4">
-	<h4 class="font-light">{cardTitle(category)}</h4>
-	<hr />
-	<img alt="{Langlsater Discord bot} logo" src={image} class="w-full h-auto rounded-xl my-4 mx-0"/>
-	<article>
-		<h2 class="text-xl font-bold">{title}</h2>
+<section class="card shadow-xl bg-white border w-[33%]">
+	<figure>
+		<img src={image} alt="Something to put here" /><!-- TODO - Add alt text -->
+	</figure>
+	<article class="card-body">
+		<div class="badge badge-outline">{cardTitle(category)}</div>
+		<h2 class="card-title">{title}</h2>
 		<p class="justify-normal">{description}</p>
+		<div class="card-actions justify-end">
+			<a class="btn btn-primary bg-blue-500 hover:bg-blue-600 focus:bg-blue-800 border-none" href={href}>Read more</a>
+		</div>
 	</article>
-	<a href={href} class="button">Read more</a>
 </section>

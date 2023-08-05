@@ -3,25 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Tristan Bony - Software Engineering Student">
 	<main>
-		<h1>Hello, <span class="text-gradient">World!</span></h1>
-
-		<div class="flex-row flex-wrap">
+		<!-- TODO - Add sort options for perso-projects | school-projects | work-exp -->
+		<div class="flex flex-row flex-wrap" id="cards-container"> <!-- TODO- Center -->
 			<Card 
-				href="null"
+				href="http://localhost:3000"
 				title="Get Started"
-				description="Learn how to build your first Astro site in minutes."
+				description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 				image="../src/assets/my_website_v5/Screen_TristanB_v5.png"
 				category='achievement'
 			/>
 			<Card 
-				href="null"
+				href="http://localhost:3000"
 				title="Get Started"
 				description="Learn how to build your first Astro site in minutes."
-				image="../src/assets/my_website_v5/Screen_TristanB_v5.png"
+				image="../src/assets/my_website_v4/Screen_TristanB_en.png"
 				category='achievement'
 			/>
-		</ul>
+		</div>
 	</main>
 </Layout>
