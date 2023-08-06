@@ -1,51 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import GlobalLayout from '../layouts/GlobalLayout.astro';
+import CardDisplay from '../layouts/CardDisplay.astro';
+import PresentationLayout from '../layouts/PresentationLayout.astro';
 
 const d: Date = new Date();
 const year: number = d.getFullYear();
 ---
 
-<Layout title="Tristan Bony - Software Engineering Student">
-	<header class="header p-4 bg-white text-base-content shadow-lg rounded-2xl w-full">
-		<!-- TODO -->
+<GlobalLayout title="Tristan Bony - Software Engineering Student">
+	<header class="header p-4 bg-white text-base-content shadow-lg rounded-2xl w-full mb-4">
 		<a href="https://www.tristanbony.me/" class="inline-flex">
-			<img src="./images/favicon.svg" alt="Tristan Bony" class="w-24 h-24" />
+			<img src="./images/favicon.svg" alt="Logo representing the initials T B" class="w-24 h-24" />
 			<h1 class="text-black font-bold text-4xl my-auto ms-4">Tristan Bony</h1>
 		</a>
+		<!-- TODO - Add light/dark switch-->
 	</header>
 
 	<main>
-		<!-- Add presentation -->
-		<!-- TODO - Add sort options for perso-projects | school-projects | work-exp -->
-		<div class="flex flex-row flex-wrap justify-center" id="cards-container"> <!-- TODO- Center -->
-			<Card 
-				href="http://localhost:3000"
-				title="Get Started"
-				description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-				image="../src/assets/my_website_v5/Screen_TristanB_v5.png"
-				category='achievement'
-			/>
-			<Card 
-				href="http://localhost:3000"
-				title="Get Started"
-				description="Learn how to build your first Astro site in minutes."
-				image="../src/assets/my_website_v4/Screen_TristanB_en.png"
-				category='achievement'
-			/>
-			<Card 
-			href="http://localhost:3000"
-			title="Get Started"
-			description="Learn how to build your first Astro site in minutes."
-			image="../src/assets/my_website_v4/Screen_TristanB_en.png"
-			category='achievement'
-			/>
-		</div>
+		<PresentationLayout />
+		
+		<CardDisplay />
 	</main>
 
-	<footer class="footer footer-center p-4 bg-white shadow-lg rounded-2xl text-base">
+	<footer class="footer footer-center p-4 bg-white shadow-lg rounded-2xl text-base mt-2">
 		<div>
 			<p>&copy; {year} Tristan Bony</p>
 		</div>
 	  </footer>
-</Layout>
+</GlobalLayout>

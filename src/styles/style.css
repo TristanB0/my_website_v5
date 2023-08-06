@@ -4,13 +4,6 @@ body {
     font-family: Segoe;
 }
 
-header, footer, section {
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 1em;
-    margin: 1em 0em;
-    box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
-}
 header:hover, footer:hover, section:hover {
     box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 52%), 0 0.3px 0.9px 0 rgb(0 0 0 / 44%);
     transition: box-shadow .15s ease-in-out;
@@ -37,75 +30,6 @@ header:hover, footer:hover, section:hover {
     margin: auto;
 }
 
-article {
-    text-align: justify;
-}
-
-.content > article {
-    flex: 70%;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.content > aside {
-    display: flex;
-    flex: 25%;
-    margin-left: 20px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
-    border-radius: 15px;
-}
-
-.card-header {
-    background-color: #0078d4;
-    height: 9rem;
-    width: 100%;
-    margin-bottom: 3.5rem;
-    border-radius: 15px 15px 0 0;
-}
-
-.card-image {
-    display: block;
-    width: 120px;
-    height: auto;
-    margin: 3.5rem auto 0 auto;
-    border-radius: 15px;
-}
-
-.card-body {
-    padding: 1rem;
-    margin-top: -1rem;
-    text-align: center;
-}
-
-.card-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.card-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.card-footer img {
-    width: 32px;
-    height: 32px;
-    margin: 0.5rem;
-}
-
 section.achievements {
     width: 30%;
     padding: 1em;
@@ -125,35 +49,6 @@ section.achievements {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-}
-
-img.logo {
-    width: 98px;
-    height: 98px;
-}
-
-h1, h2, h3, h4 {
-    color: black;
-}
-h1 {
-    margin-left: 16px;
-}
-h2 {
-    margin-top: 0;
-}
-
-header {
-    display: inline-flex;
-    width: 100%;
-}
-
-header > a {
-    display: inline-flex;
-    text-decoration: none;
-}
-
-footer p {
-    margin: 0;
 }
 
 *, ::after, ::before {
