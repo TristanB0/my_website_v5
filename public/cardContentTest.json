@@ -1,0 +1,23 @@
+[
+    {
+        "title": "My website v5",
+        "content": "The most recent version of my website in which I present my interest for IT and the different projects I have made throughout the years.",
+        "category": "achievement",
+        "picture": "../src/assets/my_website_v5/Screen_TristanB_v5.png",
+        "link": "http://localhost:3000"
+    },
+    {
+        "title": "Q-learning",
+        "content": "Making of a game and an IA using the C language and SDL2 to find the exit of a maze via the quickest path.",
+        "category": "school-project",
+        "picture": "./src/assets/q_learning/player_mode.png",
+        "link": "http://localhost:3000"
+    },
+    {
+        "title": "INVIVOO",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "category": "experience",
+        "picture": "",
+        "link": "http://localhost:3000"
+    }
+]
