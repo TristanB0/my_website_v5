@@ -4,11 +4,17 @@ import vercel from "@astrojs/vercel/serverless";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 
+// 
 // https://astro.build/config
 export default defineConfig({
-    output: "server",
-    adapter: vercel({
-        analytics: true,
-    }),
-    integrations: [tailwind(), solidJs()]
+  output: "server",
+  integrations: [tailwind(), solidJs()],
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    speedInsights: {
+        enabled: true,
+      },  
+  })
 });
