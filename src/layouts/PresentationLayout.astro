@@ -8,8 +8,8 @@ const age: number = (todaysDate.getTime() - birthday.getTime())/(1000*60*60*24*3
 
 <section id="presentation" class="shadow-lg bg-white border w-full rounded-2xl p-4 mb-2">
     <div class="flex flex-row flex-wrap justify-around items-center">
-        <article class="text-justify flex-[70%]">
-            <h2 class="text-2xl font-bold mb-10">Who am I?</h2>
+        <article class="text-justify md:flex-[70%]">
+            <h2 class="text-2xl font-bold mb-10">Who am I? (boring version)</h2>
             <p class="mb-3">
                 Immersed in the world of computer science from a very young age, I quickly became curious to understand the technologies that are part of our daily lives by tinkering and searching for information by myself.
             </p>
@@ -30,23 +30,22 @@ const age: number = (todaysDate.getTime() - birthday.getTime())/(1000*60*60*24*3
             </p>
             <!-- Show the boring funnier text if clicked or the innovative presentation by default -->
         </article>
-        <aside class="flex flex-[25%] flex-col flex-wrap ml-5 justify-around items-center shadow-lg rounded-2xl">
+        <aside class="flex md:flex-[25%] flex-col flex-wrap md:ml-5 justify-around items-center shadow-lg rounded-2xl">
             <div class="bg-blue-500 h-36 w-full mb-14 rounded-t-2xl">
                 <img class="block w-32 h-auto mt-14 mx-auto mb-0 rounded-2xl" src="../src/assets/profile_pic.jpg" alt="Picture of me" />
             </div>
             <div class="p-4 mt-4 text-center">
                 <h3 class="text-lg font-semibold">Tristan Bony, {age.toFixed(0)}, <span class="italic">(he/him)</span></h3>
-                <p>Student in Computer Sciences @ University of Oklahoma, Norman, OK, USA</p>
+                <p>Student in Computer Sciences @ University of Oklahoma, Norman, OK, USA && ISIMA, France</p>
                 <address>
                     <ul>
                         <li class="card-li">
-                            <span class="">Lyon - Clermont-Ferrand - Norman, OK</span>
+                            <span class="">Lyon, FR - Clermont-Ferrand, FR - Norman, OK, USA</span>
                         </li>
                         <li class="card-li">
                             <a href="tel:+33642089117" class="hover:underline hover:decoration-blue-500 hover:decoration-2">+33(0)6 42 08 91 17</a>
                         </li>
                         <li class="card-li">
-                            <ad
                             <a href="mailto:tristan.bony@proton.me" class="hover:underline hover:decoration-blue-500 hover:decoration-2">tristan.bony@proton.me</a>
                         </li>
                     </ul>
@@ -56,13 +55,13 @@ const age: number = (todaysDate.getTime() - birthday.getTime())/(1000*60*60*24*3
             </div>
             <div class="flex flex-wrap justify-around items-center pb-4">
                 <a href="https://www.linkedin.com/in/tristanbony/" target="_blank" title="Visit my LinkedIn" class="w-8 h-8 m-2">
-                    <img src="./images/LI-In-Bug.png" alt="LinkedIn" />
+                    <img src="./images/LI-In-Bug.svg" alt="LinkedIn" />
                 </a>
                 <a href="https://floss.social/@TristanB0" target="_blank" title="Come see my toots" class="w-8 h-8 m-2">
                     <img src="./images/mastodon-logo-purple.svg" alt="Mastodon" />
                 </a>
                 <a href="https://www.github.com/TristanB0" target="_blank" title="Link to my projects" class="w-8 h-8 m-2">
-                    <img src="./images/GitHub-Mark-32px.png" alt="GitHub" />
+                    <img src="./images/github-mark.svg" alt="GitHub" />
                 </a>
             </div>
         </aside>
