@@ -5,7 +5,7 @@ interface Props {
 	title: string;
 	description: string;
 	href: string;
-	status: string;	// TODO - Add a colored indicator (position as category); values: completed, in-progress, maintenance or empty
+	status: string;
 }
 
 const cardTitle = (cat: string) => {
@@ -21,7 +21,27 @@ const cardTitle = (cat: string) => {
 	}
 };
 
-const { category, image, title, description, href } = Astro.props;
+const cardStatus = (status: string) => {
+	switch (status) {
+		case "completed":
+			return {
+				color: "text-green-500",
+				status: "Completed",
+			};
+		case "in-progress":
+			return {
+				color: "text-yellow-500",
+				status: "In progress",
+			};
+		case "abandoned":
+			return {
+				color: "text-red-500",
+				status: "Abandoned",
+			};
+	}
+};
+
+const { category, image, title, description, href, status } = Astro.props;
 ---
 
 <section class="card shadow-lg bg-white border md:w-[30%] m-2 w-[100%]">
@@ -29,7 +49,10 @@ const { category, image, title, description, href } = Astro.props;
 		<img src={image} alt="Something to put here" /><!-- TODO - Add alt text -->
 	</figure>
 	<article class="card-body">
-		<div class="badge badge-outline text-gray-500">{cardTitle(category)}</div>
+		<div class="inline">
+			<div class="badge badge-outline text-gray-500">{cardTitle(category)}</div>
+			<div class:list={["badge badge-outline text-gray-500", cardStatus(status)?.color || "invisible"]}>{cardStatus(status)?.status || null}</div>
+		</div>
 		<h2 class="card-title">{title}</h2>
 		<p class="justify-normal">{description}</p>
 		<div class="card-actions justify-end">
