@@ -11,11 +11,11 @@ interface Props {
 const cardTitle = (cat: string) => {
 	switch (cat) {
 		case "achievement":
-			return "My achievements";
+			return "Achievements";
 		case "school-project":
-			return "My school projects";
+			return "School projects";
 		case "experience":
-			return "My experiences";
+			return "Experiences";
 		default:
 			return "Unknown";
 	}
@@ -24,7 +24,7 @@ const cardTitle = (cat: string) => {
 const { category, image, title, description, href } = Astro.props;
 ---
 
-<section class="card shadow-lg bg-white border md:w-[30%] md:m-2 w-[100%]">
+<section class="card shadow-lg bg-white border md:w-[30%] m-2 w-[100%]">
 	<figure>
 		<img src={image} alt="Something to put here" /><!-- TODO - Add alt text -->
 	</figure>
