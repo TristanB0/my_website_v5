@@ -9,21 +9,30 @@ tags: ["astro", "blogging", "learning in public"]
 
 ## {title}
 
-<p>This project has for goal to translate every messages which are not in the language selected by Discord server administrators.</p>
+This project has for goal to translate every messages which are not in the language selected by Discord server administrators.
+
+
 <!--Reason to start the project-->
-<p>I started thinking about this bot when I started reading messages which were not in the languages I know and got tired of translating every messages by hand. A bot to automate translation would have allowed me to understand conversations quicker and focus on more important things.</p>
+I started thinking about this bot when I started reading messages which were not in the languages I know and got tired of translating every messages by hand. A bot to automate translation would have allowed me to understand conversations quicker and focus on more important things.
+
+
 <!--Tools used-->
-<p>I used Python as the programming language (with discord.py wrapper) and SQL to store the target language per server in a SQLite database.</p>
+I used Python as the programming language (with discord.py wrapper) and SQL to store the target language per server in a SQLite database.
+
+
 <!--Explanation-->
-<p>The bot uses slash commands to set it up.<br />
-An admin must specify a translation language so that the bot can translate messages sent in another language to this specified one.<br />
-Another functionality allows members to send a message in another language without it being translated.</p>
+The bot uses slash commands to set it up.
+
+An admin must specify a translation language so that the bot can translate messages sent in another language to this specified one.
+
+Another functionality allows members to send a message in another language without it being translated.
+
+
 <!--List of commands-->
-<p>To resume the list of commands:
-    <ul>
-        <li><i>/help</i> shows the help with every commands available</li>
-        <li><i>/set_languages [string]</i> is used to define the target language, the one which will not be translated (available only to administrator)</li>
-        <li><i>/translate [string]</i> can be used to send a message in another language</li>
-    </ul>
-</p>
-<p>Of course, if the bot is removed from a server, the information stored in the database is deleted.</p>
+To resume the list of commands:
+- */help* shows the help with every commands available
+- */set_languages [string]* is used to define the target language, the one which will not be translated (available only to administrator)
+- */translate [string]* can be used to send a message in another language
+
+
+Of course, if the bot is removed from a server, the information stored in the database is deleted.

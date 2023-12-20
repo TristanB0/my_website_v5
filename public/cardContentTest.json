@@ -14,7 +14,7 @@
         "title": "Q-learning",
         "content": "Making of a game and an IA using the C language and SDL2 to find the exit of a maze via the quickest path.",
         "category": "school-project",
-        "picture": "./src/assets/q_learning/player_mode.png",
+        "picture": "../src/assets/q_learning/player_mode.png",
         "link": "http://localhost:4321",
         "from": "2022-06",
         "to": "2022-06",
