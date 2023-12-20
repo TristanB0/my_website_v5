@@ -1,0 +1,29 @@
+---
+layout: ../../layouts/PostLayout.astro
+title: 'Raspberry Pi projects'
+date: 2022-07-01
+description: 'This is the first post of my new Astro blog.'
+link: null
+tags: ["astro", "blogging", "learning in public"]
+---
+
+## {title}
+
+<p>This page lists all the projects I have made using a Raspberry Pi. They were very interesting to understand how some part of the Internet work. It's also pretty useful to be able to access it anytime and anywhere to learn setting up everything. Moreover, I installed the Raspberry Pi OS Lite (64-bit) to optimize performances and to use it such as a server.</p>
+<ul>
+    <li>Host my website</li>
+    <p>My website runs on the Raspberry Pi thanks to Apache HTTP Server, and since I have my own domain name, I learned to configure DDNS (currently only with IPv4) and other settings such as redirections or subdomains. I installed an SSL certificate from Let's Encrypt to understand how it works and to protect my information of BitWarden and GitLab, which I also plan to self-host.</p>
+
+    <li>Host a VPN and an ad and tracker-blocking application</li>
+    <p>I wanted to be able to access the french content of services even when I was abroad and add security on public networks, so I installed a VPN which is running WireGuard. Moreover, I installed Pi-hole for even more privacy. It is a network-level advertisement and Internet tracker blocking application that is accessed by setting up the Pi local IP address in the DNS section of a computer.</p>
+
+    <li>Host my Discord bots</li>
+    <p>It is easy to run Python on GNU/Linux, so here it belongs. I just had to make sure I installed every libraries needed.</p>
+
+    <li>Host a Minecraft server</li>
+    <p>This is just a simple Minecraft server running Paper where I can meet with my friends and create structures of our choices. For now, we have been working on recreating our former school where we met.</p>
+    <figure>
+        <img src="./assets/images/raspberry_pi/Minecraft_render.png" alt="Minecraft render of our former school" />
+        <figcaption>Minecraft render of our former school. (Work in progress)</figcaption>
+    </figure>
+</ul>
