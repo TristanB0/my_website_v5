@@ -3,38 +3,47 @@ import Card from '../components/Card.astro';
 
 // TODO - Add sort options for perso-projects | school-projects | work-exp
 ---
+
 <!-- TODO - Add sort options for perso-projects | school-projects | work-exp -->
 <div class="flex flex-row flex-wrap justify-center" id="cards-container"> <!-- TODO - Center -->
     <Card 
-        href="./posts/test_post"
+        href="./posts/my_website_v5"
         title="My website v5"
         description="The most recent version of my website in which I present my interest for IT and the different projects I have made throughout the years."
-        image="../src/assets/my_website_v5/Screen_TristanB_v5.png"
+        image="./src/assets/my_website_v5/Screen_TristanB_v5.png"
+        imageAlt="Screenshot of my website on v5"
         category="achievement"
         status="in-progress"
+        client:visible
     />
     <Card 
-        href="./posts/test_post"
+        href="./posts/q_learning"
         title="Q-learning"
         description="Making of a game and an IA using the C language and SDL2 to find the exit of a maze via the quickest path."
-        image="../src/assets/q_learning/player_mode.png"
+        image="../assets/q_learning/player_mode.png"
+        imageAlt="Screenshot of the game in player mode"
         category="school-project"
         status="completed"
+        client:visible
     />
     <Card 
         href="./posts/test_post"
         title="INVIVOO internship"
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         image=""
+        imageAlt=""
         category="experience"
         status=""
+        client:visible
     />
     <Card
         href="./posts/test_post"
         title="Lorem Ipsum"
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         image=""
+        imageAlt=""
         category="other"
         status="abandoned"
+        client:visible
     />
 </div>

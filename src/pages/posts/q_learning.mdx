@@ -12,22 +12,22 @@ tags: ["astro", "blogging", "learning in public"]
 This is the project we had to do at the end of our first year of engineering school in teams of 3. The goal was to build a game using the C language and SDL2 and then build a Q-learning algorithm (here: double-Q-learning) to learn solving the game.
 
 
-![IA learning](/assets/images/q_learning/ia_learning.gif "The IA at its first stages of learning.")
+![IA learning](../../assets/q_learning/ia_learning.gif "The IA at its first stages of learning.")
 
 
 Our game is a maze with multiple paths, devided in two parts, to get to the exit, but there is a passage at the center which is mandatory to get to the second part of the game. There are also ennemies located in mutiples dead ends and crossing their line of sight is a game over.
 
 
-![IA not optimal](/assets/images/q_learning/ia_not_optimal_path.gif "The IA finds the exit but not via the optimal way.")
+![IA not optimal](../../assets/q_learning/ia_not_optimal_path.gif "The IA finds the exit but not via the optimal way.")
 
 
 One of the challenge is to find the correct balance of settings for it to learn efficiently. An other challenge is to chose the right perceptions of the IA. In our case, we decided it could see 4 cases around it <code>(UP, RIGHT, DOWN, LEFT)</code> and that he could not go back except in case of a dead end.
 
 
-![IA best path](/assets/images/q_learning/ia_best_path.gif "The IA after it learned during enough time.")
+![IA best path](../../assets/q_learning/ia_best_path.gif "The IA after it learned during enough time.")
 
 
 We also added a gamemode where the player could solve the maze by himself and we integrated the whole through a menu.
 
 
-![player mode](/assets/images/q_learning/player_mode.png "Images of the player mode with updated graphics.")
+![player mode](../../assets/q_learning/player_mode.png "Images of the player mode with updated graphics.")

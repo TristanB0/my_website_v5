@@ -1,9 +1,11 @@
 ---
-// Might need JS to print next visualization
+import { Image } from "astro:assets";
 
 const todaysDate: Date = new Date();
 const birthday: Date = new Date(2000, 4, 16);
 const age: number = Math.floor((todaysDate.getTime() - birthday.getTime())/(1000*60*60*24*365.25));
+
+import profilePic from "../assets/profile_pic.jpg";
 ---
 
 <section id="presentation" class="shadow-lg bg-white border w-full rounded-2xl p-4 mb-2">
@@ -32,7 +34,7 @@ const age: number = Math.floor((todaysDate.getTime() - birthday.getTime())/(1000
         </article>
         <aside class="flex md:flex-[25%] flex-col flex-wrap md:ml-5 justify-around items-center shadow-lg rounded-2xl">
             <div class="bg-blue-500 h-36 w-full mb-14 rounded-t-2xl">
-                <img class="block w-32 h-auto mt-14 mx-auto mb-0 rounded-2xl" src="../src/assets/profile_pic.jpg" alt="Picture of me" />
+                <Image class="block w-32 h-auto mt-14 mx-auto mb-0 rounded-2xl" src={profilePic} alt="Picture of me" />
             </div>
             <div class="p-4 mt-4 text-center">
                 <ul>
