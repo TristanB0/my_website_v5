@@ -14,7 +14,7 @@ export default defineConfig({
 /*
 export default defineConfig({
   output: "server",
-  integrations: [tailwind(), solidJs(), ndx()],
+  integrations: [tailwind(), mdx()],
   adapter: vercel({
     webAnalytics: {
       enabled: true,

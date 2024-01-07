@@ -9,7 +9,7 @@ interface Props {
 	};
 	category: string;
 	status: string;
-};
+}
 
 const cardTitle = (cat: string) => {
 	switch (cat) {
@@ -53,13 +53,25 @@ const { title, description, href, image, category, status } = Astro.props;
 	</figure>
 	<article class="card-body">
 		<div class="inline">
-			<div class="badge badge-outline text-gray-500">{cardTitle(category)}</div>
-			<div class:list={["badge badge-outline text-gray-500", cardStatus(status)?.color || "invisible"]}>{cardStatus(status)?.status || null}</div>
+			<div class="badge badge-outline text-gray-500">
+				{cardTitle(category)}
+			</div>
+			<div
+				class:list={[
+					"badge badge-outline text-gray-500",
+					cardStatus(status)?.color || "invisible",
+				]}
+			>
+				{cardStatus(status)?.status || null}
+			</div>
 		</div>
 		<h2 class="card-title">{title}</h2>
-		<p class="justify-normal">{description}</p>
+		<p class="justify-normal text-justify">{description}</p>
 		<div class="card-actions justify-end">
-			<a class="btn btn-primary bg-blue-500 hover:bg-blue-600 focus:bg-blue-800 border-none" href={href}>Read more</a>
+			<a
+				class="btn btn-primary bg-blue-500 hover:bg-blue-600 focus:bg-blue-800 border-none"
+				href={href}>Read more</a
+			>
 		</div>
 	</article>
 </section>

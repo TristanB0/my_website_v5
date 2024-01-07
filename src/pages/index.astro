@@ -1,11 +1,11 @@
 ---
-import GlobalLayout from '../layouts/GlobalLayout.astro';
-import PresentationLayout from '../layouts/PresentationLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Card from '../components/Card.astro';
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import PresentationLayout from "../layouts/PresentationLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 
-const allPosts = await Astro.glob('../pages/posts/*.mdx');
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
 // TODO - Add sorting by type of projects, etc.
 ---
 
@@ -14,9 +14,23 @@ const allPosts = await Astro.glob('../pages/posts/*.mdx');
 
 	<main>
 		<PresentationLayout />
-		
-		<div class="flex flex-row flex-wrap justify-center" id="cards-container">
-			{allPosts.map((post) => <Card title={post.frontmatter.title} description={post.frontmatter.description} href={post.url} image={post.frontmatter.image} category={post.frontmatter.card} status={post.frontmatter.status}/>)}
+
+		<div
+			class="flex flex-row flex-wrap justify-center"
+			id="cards-container"
+		>
+			{
+				allPosts.map((post) => (
+					<Card
+						title={post.frontmatter.title}
+						description={post.frontmatter.description}
+						href={post.url}
+						image={post.frontmatter.image}
+						category={post.frontmatter.card}
+						status={post.frontmatter.status}
+					/>
+				))
+			}
 		</div>
 	</main>
 
