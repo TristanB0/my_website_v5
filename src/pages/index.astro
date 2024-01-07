@@ -26,7 +26,7 @@ const allPosts = await Astro.glob("../pages/posts/*.mdx");
 						description={post.frontmatter.description}
 						href={post.url}
 						image={post.frontmatter.image}
-						category={post.frontmatter.card}
+						category={post.frontmatter.category}
 						status={post.frontmatter.status}
 					/>
 				))
