@@ -1,18 +1,12 @@
 ---
-import GlobalLayout from "../layouts/GlobalLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import GlobalLayout from '../layouts/GlobalLayout.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
 <GlobalLayout title="Tristan Bony - Software Engineering Student">
-	<Header />
-
 	<main>
 		<slot />
-		<!-- <Markdown content to customize/> -->
+		<!-- TODO: Customize markdown content -->
 	</main>
-
-	<Footer />
 </GlobalLayout>
