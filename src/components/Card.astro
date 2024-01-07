@@ -1,13 +1,15 @@
 ---
 interface Props {
-	category: string;
-	image: string;
-	imageAlt: string;
 	title: string;
 	description: string;
-	href: string;
+	href: string | undefined;
+	image: {
+		path: string;
+		alt: string;
+	};
+	category: string;
 	status: string;
-}
+};
 
 const cardTitle = (cat: string) => {
 	switch (cat) {
@@ -42,12 +44,12 @@ const cardStatus = (status: string) => {
 	}
 };
 
-const { category, image, imageAlt, title, description, href, status } = Astro.props;
+const { title, description, href, image, category, status } = Astro.props;
 ---
 
 <section class="card shadow-lg bg-white border md:w-[30%] m-2 w-[100%]">
 	<figure>
-		<img src={image} alt={imageAlt} />
+		<img src={image.path} alt={image.alt} />
 	</figure>
 	<article class="card-body">
 		<div class="inline">
