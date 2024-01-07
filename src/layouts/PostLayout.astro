@@ -3,6 +3,8 @@ import GlobalLayout from '../layouts/GlobalLayout.astro';
 
 const d: Date = new Date();
 const year: number = d.getFullYear();
+
+const { frontmatter } = Astro.props;
 ---
 
 <GlobalLayout title="Tristan Bony - Software Engineering Student">
@@ -28,7 +30,8 @@ const year: number = d.getFullYear();
 	</header>
 
 	<main>
-		<!-- <Markdown content /> -->
+		<slot />
+		<!-- <Markdown content to customize/> -->
 	</main>
 
 	<footer class="footer footer-center p-4 bg-white shadow-lg rounded-2xl text-base mt-2">
