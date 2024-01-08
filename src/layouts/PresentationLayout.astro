@@ -1,5 +1,5 @@
 ---
-//import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 
 const todaysDate: Date = new Date();
 const birthday: Date = new Date(2000, 4, 16);
@@ -62,9 +62,9 @@ import profilePic from "../assets/profile_pic.jpg";
             class="flex md:flex-[25%] flex-col flex-wrap md:ml-5 justify-around items-center shadow-lg rounded-2xl"
         >
             <div class="bg-blue-500 h-36 w-full mb-14 rounded-t-2xl">
-                <img
+                <Image
                     class="block w-32 h-auto mt-14 mx-auto mb-0 rounded-2xl"
-                    src={profilePic.src}
+                    src={profilePic}
                     alt="Picture of me"
                 />
             </div>
