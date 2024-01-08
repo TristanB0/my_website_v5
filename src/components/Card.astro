@@ -33,8 +33,13 @@ const cardStatus = (status: string) => {
 			};
 		case "in-progress":
 			return {
-				color: "text-yellow-500",
+				color: "text-blue-500",
 				status: "In progress",
+			};
+		case "maintenance":
+			return {
+				color: "text-yellow-500",
+				status: "Maintenance",
 			};
 		case "abandoned":
 			return {
@@ -47,7 +52,7 @@ const cardStatus = (status: string) => {
 const { title, description, href, image, category, status } = Astro.props;
 ---
 
-<section class="card shadow-lg bg-white border md:w-[30%] m-2 w-[100%]">
+<section class="card shadow-lg bg-white border md:w-[23%] m-2 w-[100%]">
 	<figure>
 		<img src={image.path} alt={image.alt || "Missing image"} />
 	</figure>
