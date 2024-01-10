@@ -13,5 +13,6 @@ export default defineConfig({
     speedInsights: {
       enabled: false,
     },
+    imageService: true,
   }),
 });
