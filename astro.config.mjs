@@ -8,10 +8,10 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   adapter: vercel({
     webAnalytics: {
-      enabled: true,
+      enabled: false,
     },
     speedInsights: {
-      enabled: true,
+      enabled: false,
     },
   }),
 });

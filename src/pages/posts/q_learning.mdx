@@ -24,7 +24,10 @@ This is the project we had to do at the end of our first year of engineering sch
 import ia_learning from "../../assets/q_learning/ia_learning.gif";
 
 <figure>
-    <Image src={ia_learning} alt="IA learning" />
+    <picture>
+        <source srcset={ia_learning.src} />
+        <Image src={ia_learning} alt="IA learning" />
+    </picture>
     <figcaption>The IA at its first stages of learning.</figcaption>
 </figure>
 
