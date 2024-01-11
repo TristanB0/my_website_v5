@@ -1,17 +1,16 @@
 ---
 layout: ../../layouts/PostLayout.astro
-tags: ["astro", "blogging", "learning in public"]
 
 title: 'Anniminder (Discord Bot)'
-description: "Discord Bot which reminds people birthdays with a random sentence in the servers he set his birthday or can tell the birthday of someone else if asked by another user."
+description: "Discord Bot which reminds people birthdays with a random sentence in the servers he set his birthday, or can tell the birthday of someone else if asked by another user."
 image:
     path: "/images/card/anniminder.png"
     alt: "Logo du bot"
 category: "achievement"
-status: "abandoned"
+status: "discontinued"
 from: 2022-07-01
-to: 2022-07-01
-duration: "1 month"
+to: 2023-07-23
+duration: "1 year"
 link: 'https://github.com/TristanB0/Anniminder'
 ---
 
@@ -20,25 +19,33 @@ link: 'https://github.com/TristanB0/Anniminder'
 This project is a reminder of birthdays for Discord servers.
 
 
+{ /* Reason to start the project */ }
 I started this project when I found people were missing other people's birthday because they were storing it in plain text in a dedicated channel and often people were missing it.
 
 
-I used Python for the base of the project (with discord.py API wrapper) and SQL to store data in a SQLite database.
+{ /* Tools used */ }
+I used **Python** for the base of the project (with discord.py API wrapper) and **SQL** to store data in a **SQLite** database.
 
 
-The usage of the bot is very basic since it uses Discord slash commands.
+{ /* Explanation */ }
+The usage of the bot is very basic since it uses Discord slash commands, as explained below.
 
 When the bot is added in a new server, an ephemeral message is sent which explains how the bot works.
 
-Moreover, when a new user joins a server with Anniminder in it, he will receive a private message to be informed of the functioning of the bot.
+Moreover, when a new user joins a server with Anniminder in it, he receives a private message to be informed of the functioning of the bot.
 
+{ /* List of commands */ }
+### Commands
 
-To resume the available commands:
 - `/help` shows the help command with every information
-- `/set_channel [channel]` is used to defined a specific channel to sent birthday messages in (available only to administrator)
+- `/set_channel [channel]` is used to define a specific channel to send birthday messages in (*available only to administrator*)
 - `/add_birthday [year] [month] [day]` is used by the users to add or modify their birthday. A confirmation is sent afterward as an ephemeral message
 - `/remove_birthday` can be used by a user who no longer wants to be stored
 - `/get_birthday [user]` is used by anyone who wants to know the birthday of someone else
 
-
 Finally, when a bot is deleted from a server or when a user leaves a server, every information related to them is removed.
+
+
+### Planned functionalities
+
+Before discontinuing the bot, I planned to make the bot being able to remember any events the users want, and remind about it ther same way as birthdays. Moreover, I wanted to add the possibility to planned a weekly or monthly message using Open AI API to summarize everything, but also to create a website to facilitate the addition of dates and administration of the settings of the bot.

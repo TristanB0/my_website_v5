@@ -1,6 +1,5 @@
 ---
 layout: ../../layouts/PostLayout.astro
-tags: ["astro", "blogging", "learning in public"]
 
 title: 'Langslater (Discord Bot)'
 description: "Discord Bot which translates messages which are not in the language selected by the servers' administrators."
@@ -9,9 +8,9 @@ image:
     alt: "Logo du bot"
 category: "achievement"
 status: "maintenance"
-from: 2022-07-01
-to: 2022-07-01
-duration: "1 month"
+from: 2022-09-21
+to: 2023-07-23
+duration: "1 years"
 link: 'https://github.com/TristanB0/Langslater'
 ---
 
@@ -21,11 +20,11 @@ This project has for goal to translate every messages which are not in the langu
 
 
 { /* Reason to start the project */ }
-I started thinking about this bot when I started reading messages which were not in the languages I know and got tired of translating every messages by hand. A bot to automate translation would have allowed me to understand conversations quicker and focus on more important things.
+I started thinking about this bot when I started reading messages which were not in the languages I know and got tired of translating every messages by hand. A bot to automate translation would have allowed me to understand conversations quicker.
 
 
 { /* Tools used */ }
-I used Python as the programming language (with discord.py wrapper) and SQL to store the target language per server in a SQLite database.
+I used **Python** as the programming language (with discord.py wrapper) and **SQL** to store the target language per server in a **SQLite** database.
 
 
 { /* Explanation */ }
@@ -37,10 +36,11 @@ Another functionality allows members to send a message in another language witho
 
 
 { /* List of commands */ }
-To resume the list of commands:
+### Commands
+
 - `/help` shows the help with every commands available
-- `/set_languages [string]` is used to define the target language, the one which will not be translated (available only to administrator)
+- `/set_languages [string]` is used to define the target language, the one which will not be translated (*available only to administrator*)
 - `/translate [string]` can be used to send a message in another language
 
 
-Of course, if the bot is removed from a server, the information stored in the database is deleted.
+If the bot is removed from a server, all information regarding it stored in the database is deleted.

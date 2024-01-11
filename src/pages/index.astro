@@ -4,10 +4,9 @@ import PresentationLayout from "../layouts/PresentationLayout.astro";
 import Card from "../components/Card.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
-// TODO - Add sorting by type of projects, etc.
 ---
 
-<GlobalLayout title="Tristan Bony - Software Engineering Student">
+<GlobalLayout title="Tristan Bony - Software Engineering Student" description="Welcome to Tristan's personal website! You will find my different projects and past experiences.">
 	<main>
 		<PresentationLayout />
 
