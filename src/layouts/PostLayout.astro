@@ -8,7 +8,14 @@ const title = frontmatter.title + " - Tristan Bony";
 
 <GlobalLayout title={title} description={frontmatter.description}>
 	<main
-		class="shadow-lg bg-white border max-w-none rounded-2xl p-4 mb-4 prose dark:prose-invert prose-headings:text-black prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-p:text-black prose-img:rounded-2xl prose-img:max-h-[500px] prose-img:w-full prose-figure:w-fit prose-figure:m-auto prose-figcaption:text-center prose-li:text-black prose-code:text-black prose-figure:border prose-figure:rounded-2xl prose-figure:p-2"
+		class="
+			shadow-lg bg-white border max-w-none rounded-2xl p-4 mb-4
+			
+			prose prose-headings:text-black prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-p:text-gray-800 prose-img:rounded-2xl prose-img:max-h-[500px] prose-img:w-full prose-figure:w-fit prose-figure:m-auto prose-figcaption:text-center prose-li:text-black prose-code:text-black prose-figure:border prose-figure:rounded-2xl prose-figure:p-2 prose-strong:text-black prose-li:marker:text-black
+			
+			dark:prose-invert dark:bg-gray-800
+			
+			dark:prose-headings:text-white dark:prose-p:text-white dark:prose-img:rounded-2xl dark:prose-img:max-h-[500px] dark:prose-img:w-full dark:prose-figure:w-fit dark:prose-figure:m-auto dark:prose-figcaption:text-center dark:prose-li:text-white dark:prose-code:text-white dark:prose-figure:border dark:prose-figure:rounded-2xl dark:prose-figure:p-2 dark:prose-strong:text-white dark:prose-li:marker:text-white"
 	>
 		<slot />
 	</main>

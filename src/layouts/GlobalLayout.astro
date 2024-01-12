@@ -12,7 +12,7 @@ const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en-US" class="bg-gray-100" transition:animate="slide">
+<html lang="en-US" transition:animate="slide">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content={description} />
@@ -23,14 +23,18 @@ const { title, description } = Astro.props;
 		<style is:global>
 			body {
 				font-family: "Segoe UI", system-ui, sans-serif;
-				color: black;
+			}
+			:root {
+				--b1: 0;
 			}
 		</style>
 		<ViewTransitions />
 	</head>
-	<body class="md:my-4 md:mx-52 m-4">
-		<Header />
-		<slot />
-		<Footer />
+	<body class="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white">
+		<div class="md:my-4 md:mx-52 m-4">
+			<Header />
+			<slot />
+			<Footer />
+		</div>
 	</body>
 </html>

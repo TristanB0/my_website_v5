@@ -13,7 +13,7 @@ import profilePic from "../assets/profile_pic.jpg";
 
 <section
     id="presentation"
-    class="shadow-lg bg-white border w-full rounded-2xl p-4 mb-2"
+    class="shadow-lg bg-white dark:bg-gray-800 border w-full rounded-2xl p-4 mb-2"
 >
     <div class="flex flex-row flex-wrap justify-around items-center">
         <article class="text-justify md:flex-[70%]">
@@ -57,9 +57,7 @@ import profilePic from "../assets/profile_pic.jpg";
                 (notions).
             </p>
         </article>
-        <aside
-            class="flex md:flex-[25%] flex-col flex-wrap md:ml-5 justify-around items-center shadow-lg rounded-2xl"
-        >
+        <aside class="flex md:flex-[25%] flex-col flex-wrap md:ml-5 justify-around items-center shadow-lg rounded-2xl dark:bg-gray-700">
             <div class="bg-blue-500 h-36 w-full mb-14 rounded-t-2xl">
                 <Image
                     class="block w-32 h-auto mt-14 mx-auto mb-0 rounded-2xl"
@@ -236,9 +234,17 @@ import profilePic from "../assets/profile_pic.jpg";
                     href="https://www.github.com/TristanB0"
                     target="_blank"
                     title="Link to my projects"
-                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out"
+                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out dark:hidden"
                 >
                     <img src="./images/github_logo.svg" alt="GitHub" />
+                </a>
+                <a
+                    href="https://www.github.com/TristanB0"
+                    target="_blank"
+                    title="Link to my projects"
+                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out hidden dark:block"
+                >
+                    <img src="./images/github_logo_white.svg" alt="GitHub" />
                 </a>
             </div>
         </aside>
