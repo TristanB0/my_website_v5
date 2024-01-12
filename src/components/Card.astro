@@ -52,7 +52,7 @@ const cardStatus = (status: string) => {
 const { title, description, href, image, category, status } = Astro.props;
 ---
 
-<section class="card shadow-lg bg-white border md:w-[23%] m-2 w-[100%]">
+<section class="card shadow-lg bg-white dark:bg-black border md:w-[23%] m-2 w-[100%]">
 	<figure>
 		<img src={image.path} alt={image.alt || "Missing image"} />
 	</figure>
