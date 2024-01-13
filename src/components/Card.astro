@@ -53,7 +53,7 @@ const { title, description, href, image, category, status } = Astro.props;
 ---
 
 <section class="card shadow-lg bg-white dark:bg-gray-800 md:w-[23%] m-2 w-[100%]">
-	<figure>
+	<figure class="max-h-40">
 		<img src={image.path} alt={image.alt || "Missing image"} />
 	</figure>
 	<article class="card-body">
@@ -75,8 +75,10 @@ const { title, description, href, image, category, status } = Astro.props;
 		<div class="card-actions justify-end">
 			<a
 				class="btn btn-primary bg-blue-500 hover:bg-blue-600 focus:bg-blue-800 border-none"
-				href={href}>Read more</a
-			>
+				href={href}
+				title={"Read more about " + title}>
+					Read more
+			</a>
 		</div>
 	</article>
 </section>
