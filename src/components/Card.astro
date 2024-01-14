@@ -1,4 +1,7 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 interface Props {
 	title: string;
 	description: string;
@@ -46,15 +49,29 @@ const cardStatus = (status: string) => {
 				color: "text-red-500",
 				status: "Discontinued",
 			};
+		default:
+			return {
+				color: "hidden",
+				status: null,
+			};
 	}
 };
 
 const { title, description, href, image, category, status } = Astro.props;
+
+import placeholderImg from "../assets/card/placeholder.jpg";
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/card/*.{jpeg,jpg,png,gif}');
+if (!images[image.path] && image.path != null) throw new Error(`"${image.path}" does not exist in glob: "src/assets/card/*.{jpeg,jpg,png,gif}"`);
 ---
 
 <section class="card shadow-lg bg-white dark:bg-gray-800 md:w-[45%] 2xl:w-[23%] m-2 w-[100%]">
-	<figure class="max-h-40">
-		<img src={image.path} alt={image.alt || "Missing image"} />
+	<figure class="max-h-48">
+		{
+			image.path ?
+				<Image src={images[image.path]()} alt={image.alt} />
+			:
+				<Image src={placeholderImg} alt="Missing image" />
+		}
 	</figure>
 	<article class="card-body">
 		<div class="inline">
@@ -64,10 +81,10 @@ const { title, description, href, image, category, status } = Astro.props;
 			<div
 				class:list={[
 					"badge badge-outline",
-					cardStatus(status)?.color || "invisible",
+					cardStatus(status).color
 				]}
 			>
-				{cardStatus(status)?.status || null}
+				{cardStatus(status).status}
 			</div>
 		</div>
 		<h2 class="card-title">{title}</h2>
