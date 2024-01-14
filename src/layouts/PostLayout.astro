@@ -2,21 +2,38 @@
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 
 const { frontmatter } = Astro.props;
-
-const title = frontmatter.title + " - Tristan Bony";
 ---
 
-<GlobalLayout title={title} description={frontmatter.description}>
+<GlobalLayout title={frontmatter.title + " - Tristan Bony"} description={frontmatter.description}>
 	<main
 		class="
 			shadow-lg bg-white max-w-none rounded-2xl p-4 mb-4
 			
-			prose prose-headings:text-black prose-h1:font-bold prose-h1:text-xl prose-a:text-blue-600 prose-p:text-justify prose-p:text-gray-800 prose-img:rounded-2xl prose-img:max-h-[500px] prose-img:w-full prose-figure:w-fit prose-figure:m-auto prose-figcaption:text-center prose-li:text-black prose-code:text-black prose-figure:border prose-figure:rounded-2xl prose-figure:p-2 prose-strong:text-black prose-li:marker:text-black
+			prose prose-headings:text-black prose-a:text-blue-600 prose-p:text-justify prose-p:text-gray-800 prose-img:rounded-2xl prose-img:max-h-[500px] prose-img:w-full prose-figure:w-fit prose-figure:m-auto prose-figcaption:text-center prose-li:text-black prose-code:text-black prose-figure:border prose-figure:rounded-2xl prose-figure:p-2 prose-strong:text-black prose-li:marker:text-black
 			
 			dark:prose-invert dark:bg-gray-800
 			
 			dark:prose-headings:text-white dark:prose-p:text-white dark:prose-img:rounded-2xl dark:prose-img:max-h-[500px] dark:prose-img:w-full dark:prose-figure:w-fit dark:prose-figure:m-auto dark:prose-figcaption:text-center dark:prose-li:text-white dark:prose-code:text-white dark:prose-figure:border dark:prose-figure:rounded-2xl dark:prose-figure:p-2 dark:prose-strong:text-white dark:prose-li:marker:text-white"
 	>
+		<div class="flex justify-between">
+			<h2 class="text-2xl mt-0">{frontmatter.title}</h2>
+			<a
+				href={frontmatter.link}
+				target="_blank"
+				title="Link to the project"
+				class:list={["w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out", frontmatter.link ? "dark:hidden" : "hidden"]}
+			>
+				<img src="/images/github_logo.svg" alt="GitHub" class="mb-0 mt-0" />
+			</a>
+			<a
+				href={frontmatter.link}
+				target="_blank"
+				title="Link to the project"
+				class:list={["w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out", frontmatter.link ? "hidden dark:inline-block" : "hidden"]}
+			>
+				<img src="/images/github_logo_white.svg" alt="GitHub" class="mb-0 mt-0" />
+			</a>
+		</div>
 		<slot />
 	</main>
 </GlobalLayout>

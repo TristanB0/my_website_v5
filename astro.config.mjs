@@ -8,11 +8,11 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   adapter: vercel({
     webAnalytics: {
-      enabled: false,
+      enabled: false
     },
     speedInsights: {
-      enabled: false,
+      enabled: false
     },
-    imageService: true,
-  }),
+    imageService: true
+  })
 });
