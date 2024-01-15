@@ -12,12 +12,11 @@ import profilePic from "../assets/profile_pic.jpg";
 ---
 
 <section
-    id="presentation"
-    class="shadow-lg bg-white dark:bg-gray-800 w-full rounded-2xl p-4 mb-2"
+    class="w-full p-4 mb-2 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
 >
     <div class="flex flex-row flex-wrap justify-around items-center">
         <article class="text-justify xl:flex-[70%]">
-            <h2 class="text-2xl font-bold mb-10">Who am I? (Boring version)</h2>
+            <h2 class="mb-10 text-2xl font-bold">Who am I? (Boring version)</h2>
             <p class="mb-5">
                 Immersed in the world of computer science from a very young age,
                 I quickly became curious to understand the technologies that are
@@ -57,10 +56,12 @@ import profilePic from "../assets/profile_pic.jpg";
                 (notions).
             </p>
         </article>
-        <aside class="flex xl:flex-[25%] flex-col flex-wrap xl:ml-5 justify-around items-center shadow-lg rounded-2xl dark:bg-gray-700">
-            <div class="bg-blue-500 h-36 w-full mb-14 rounded-t-2xl">
+        <aside
+            class="flex flex-col flex-wrap justify-around items-center rounded-2xl shadow-lg xl:flex-[25%] xl:ml-5 dark:bg-gray-700"
+        >
+            <div class="w-full h-36 mb-14 bg-blue-500 rounded-t-2xl">
                 <Image
-                    class="block w-32 h-auto mt-14 mx-auto mb-0 rounded-2xl"
+                    class="block w-32 h-auto mt-14 mb-0 mx-auto rounded-2xl"
                     src={profilePic}
                     alt="Picture of me"
                 />
@@ -90,8 +91,9 @@ import profilePic from "../assets/profile_pic.jpg";
                             ></path>
                         </svg>
                         <span class="text-md"
-                            >Student in Computer Sciences @ University of Oklahoma && ISIMA
-                        </span>
+                            >Student in Computer Sciences @ University of
+                            Oklahoma && ISIMA</span
+                        >
                     </li>
                     <li>
                         <address>
@@ -137,8 +139,9 @@ import profilePic from "../assets/profile_pic.jpg";
                                 <a
                                     href="tel:+33642089117"
                                     class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-                                >+33(0)6 42 08 91 17</a
                                 >
+                                    +33(0)6 42 08 91 17
+                                </a>
                             </li>
                             <li class="card-li">
                                 <svg
@@ -159,8 +162,9 @@ import profilePic from "../assets/profile_pic.jpg";
                                 <a
                                     href="mailto:tristan.bony@proton.me"
                                     class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-                                >tristan.bony@proton.me</a
-                            >
+                                >
+                                    tristan.bony@proton.me
+                                </a>
                             </li>
                         </address>
                     </li>
@@ -181,11 +185,12 @@ import profilePic from "../assets/profile_pic.jpg";
                             ></path>
                         </svg>
                         <a
-                            href="./pdf/CV_English.pdf"
+                            href="/pdf/CV_English.pdf"
                             target="_blank"
                             class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-                        >Download my CV (English) (Outdated)</a
-                    >
+                        >
+                            Download my CV (English) (Outdated)
+                        </a>
                     </li>
                     <li>
                         <svg
@@ -204,11 +209,12 @@ import profilePic from "../assets/profile_pic.jpg";
                             ></path>
                         </svg>
                         <a
-                            href="./pdf/CV_French.pdf"
+                            href="/pdf/CV_French.pdf"
                             target="_blank"
                             class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-                        >Download my CV (French) (Outdated)</a
-                    >
+                        >
+                            Download my CV (French) (Outdated)
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -217,33 +223,33 @@ import profilePic from "../assets/profile_pic.jpg";
                     href="https://www.linkedin.com/in/tristanbony/"
                     target="_blank"
                     title="Visit my LinkedIn"
-                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out"
+                    class="w-8 h-8 m-2 transition duration-300 ease-in-out hover:scale-125"
                 >
-                    <img src="./images/linkedin_logo.svg" alt="LinkedIn" />
+                    <img src="/images/linkedin_logo.svg" alt="LinkedIn" />
                 </a>
                 <a
                     href="https://floss.social/@TristanB0"
                     target="_blank"
                     title="Come see my toots"
-                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out"
+                    class="w-8 h-8 m-2 transition duration-300 ease-in-out hover:scale-125"
                 >
-                    <img src="./images/mastodon_logo.svg" alt="Mastodon" />
+                    <img src="/images/mastodon_logo.svg" alt="Mastodon" />
                 </a>
                 <a
                     href="https://www.github.com/TristanB0"
                     target="_blank"
                     title="Link to my projects"
-                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out dark:hidden"
+                    class="w-8 h-8 m-2 transition duration-300 ease-in-out hover:scale-125 dark:hidden"
                 >
-                    <img src="./images/github_logo.svg" alt="GitHub" />
+                    <img src="/images/github_logo.svg" alt="GitHub" />
                 </a>
                 <a
                     href="https://www.github.com/TristanB0"
                     target="_blank"
                     title="Link to my projects"
-                    class="w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out hidden dark:block"
+                    class="w-8 h-8 m-2 transition duration-300 ease-in-out hidden hover:scale-125 dark:block"
                 >
-                    <img src="./images/github_logo_white.svg" alt="GitHub" />
+                    <img src="/images/github_logo_white.svg" alt="GitHub" />
                 </a>
             </div>
         </aside>

@@ -21,17 +21,14 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<style is:global>
-			body {
-				font-family: "Segoe UI", system-ui, sans-serif;
-			}
 			:root {
 				--b1: 0;
 			}
 		</style>
 		<ViewTransitions />
 	</head>
-	<body class="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-white min-h-dvh">
-		<div class="xl:my-4 xl:mx-52 m-4">
+	<body class="font-sans bg-gray-100 text-gray-800 dark:bg-gray-950 dark:text-white">
+		<div class="m-4 xl:my-4 xl:mx-52">
 			<Header />
 			<slot />
 			<Footer />

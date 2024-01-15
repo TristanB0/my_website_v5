@@ -4,34 +4,50 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<GlobalLayout title={frontmatter.title + " - Tristan Bony"} description={frontmatter.description}>
+<GlobalLayout
+	title={frontmatter.title + " - Tristan Bony"}
+	description={frontmatter.description}
+>
 	<main
-		class="
-			shadow-lg bg-white max-w-none rounded-2xl p-4 mb-4
+		class="max-w-none p-4 mb-4 bg-white rounded-2xl shadow-lg prose
 			
-			prose prose-headings:text-black prose-a:text-blue-600 prose-p:text-justify prose-p:text-gray-800 prose-p:text-pretty prose-img:rounded-2xl prose-img:max-h-[500px] prose-img:w-full prose-figure:w-fit prose-figure:m-auto prose-figcaption:text-center prose-li:text-black prose-code:text-black prose-figure:border prose-figure:rounded-2xl prose-figure:p-2 prose-strong:text-black prose-li:marker:text-black
+			prose-headings:text-black prose-a:text-blue-600 prose-p:text-justify prose-p:text-gray-800 prose-p:text-pretty prose-li:text-black prose-li:marker:text-black prose-code:text-black prose-strong:text-black prose-figure:w-fit prose-figure:p-2 prose-figure:m-auto prose-figure:border prose-figure:rounded-2xl prose-img:rounded-2xl prose-img:w-full prose-img:max-h-[500px] prose-figcaption:text-center
 			
 			dark:prose-invert dark:bg-gray-800
 			
-			dark:prose-headings:text-white dark:prose-p:text-white dark:prose-img:rounded-2xl dark:prose-img:max-h-[500px] dark:prose-img:w-full dark:prose-figure:w-fit dark:prose-figure:m-auto dark:prose-figcaption:text-center dark:prose-li:text-white dark:prose-code:text-white dark:prose-figure:border dark:prose-figure:rounded-2xl dark:prose-figure:p-2 dark:prose-strong:text-white dark:prose-li:marker:text-white"
+			dark:prose-headings:text-white dark:prose-p:text-white dark:prose-li:text-white dark:prose-li:marker:text-white dark:prose-code:text-white dark:prose-strong:text-white"
 	>
 		<div class="flex justify-between">
-			<h2 class="text-2xl text-balance mt-0">{frontmatter.title}</h2>
+			<h2 class="mt-0 text-2xl text-balance">{frontmatter.title}</h2>
 			<a
 				href={frontmatter.link}
 				target="_blank"
 				title="Link to the project"
-				class:list={["w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out", frontmatter.link ? "dark:hidden" : "hidden"]}
+				class:list={[
+					"w-8 h-8 m-2 transition duration-300 ease-in-out hover:scale-125",
+					frontmatter.link ? "dark:hidden" : "hidden",
+				]}
 			>
-				<img src="/images/github_logo.svg" alt="GitHub" class="mb-0 mt-0" />
+				<img
+					src="/images/github_logo.svg"
+					alt="GitHub"
+					class="mt-0 mb-0"
+				/>
 			</a>
 			<a
 				href={frontmatter.link}
 				target="_blank"
 				title="Link to the project"
-				class:list={["w-8 h-8 m-2 hover:scale-125 transition duration-300 ease-in-out", frontmatter.link ? "hidden dark:inline-block" : "hidden"]}
+				class:list={[
+					"w-8 h-8 m-2 transition duration-300 ease-in-out hover:scale-125",
+					frontmatter.link ? "hidden dark:inline-block" : "hidden",
+				]}
 			>
-				<img src="/images/github_logo_white.svg" alt="GitHub" class="mb-0 mt-0" />
+				<img
+					src="/images/github_logo_white.svg"
+					alt="GitHub"
+					class="mt-0 mb-0"
+				/>
 			</a>
 		</div>
 		<slot />

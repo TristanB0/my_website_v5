@@ -6,14 +6,14 @@ import Card from "../components/Card.astro";
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
 ---
 
-<GlobalLayout title="Tristan Bony - Software Engineering Student" description="Welcome to Tristan's personal website! You will find my different projects and past experiences.">
+<GlobalLayout
+	title="Tristan Bony - Software Engineering Student"
+	description="Welcome to Tristan's personal website! You will find my different projects and past experiences."
+>
 	<main>
 		<PresentationLayout />
 
-		<div
-			class="flex flex-row flex-wrap justify-center"
-			id="cards-container"
-		>
+		<div class="flex flex-row flex-wrap justify-center">
 			{
 				allPosts.map((post) => (
 					<Card

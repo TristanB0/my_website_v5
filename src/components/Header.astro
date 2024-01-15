@@ -2,21 +2,19 @@
 
 ---
 
-<header class="header p-4 bg-white dark:bg-gray-800 shadow-lg rounded-2xl w-full mb-4 flex flex-row">
+<header class="header flex flex-row justify-between mb-4 p-4 w-full shadow-lg rounded-2xl bg-white dark:bg-gray-800">
     <a href="/" class="inline-flex">
         <img
             src="/images/favicon.svg"
             alt="Logo representing the initials T B"
-            class="w-24 h-24"
+            class="h-24 w-24"
         />
-        <h1 class="text-black dark:text-white font-bold text-4xl text-balance my-auto ms-4">
+        <h1 class="my-auto ms-4 text-black text-4xl font-bold text-balance dark:text-white">
             Tristan Bony
         </h1>
     </a>
 
-    <div class="flex-grow"></div>
-
-    <label class="swap swap-rotate place-content-evenly">
+    <label class="swap swap-rotate">
         <input type="checkbox" id="themeToggle" />
 
         <!-- Sun icon -->
@@ -60,11 +58,13 @@
             document.documentElement.classList.remove("dark");
         } else {
             document.documentElement.classList.add("dark");
-            const themeToggle = document.getElementById("themeToggle") as HTMLInputElement;
+            const themeToggle = document.getElementById(
+                "themeToggle",
+            ) as HTMLInputElement;
             themeToggle.checked = true;
         }
 
-        window.localStorage.setItem("theme", theme ?? '');
+        window.localStorage.setItem("theme", theme ?? "");
 
         const handleToggleClick = () => {
             const element = document.documentElement;
