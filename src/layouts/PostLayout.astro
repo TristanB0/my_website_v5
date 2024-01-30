@@ -1,5 +1,6 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+import { Icon } from 'astro-icon/components';
 
 const { frontmatter } = Astro.props;
 
@@ -30,11 +31,7 @@ const title = frontmatter.title + " - Tristan Bony";
 					frontmatter.link ? "dark:hidden" : "hidden",
 				]}
 			>
-				<img
-					src="/images/github_logo.svg"
-					alt="GitHub"
-					class="mt-0 mb-0"
-				/>
+				<Icon name="github" title="Link to the project" class="mt-0 mb-0" size={32} />
 			</a>
 			<a
 				href={frontmatter.link}
@@ -45,11 +42,7 @@ const title = frontmatter.title + " - Tristan Bony";
 					frontmatter.link ? "hidden dark:inline-block" : "hidden",
 				]}
 			>
-				<img
-					src="/images/github_logo_white.svg"
-					alt="GitHub"
-					class="mt-0 mb-0"
-				/>
+				<Icon name="github_white" title="Link to the project" class="mt-0 mb-0" size={32} />
 			</a>
 		</div>
 		<slot />
