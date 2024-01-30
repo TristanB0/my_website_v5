@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 
-title: 'Anniminder (Discord Bot)'
+title: "Anniminder (Discord Bot)"
 description: "Discord Bot which reminds people birthdays with a random sentence in the servers he set his birthday, or can tell the birthday of someone else if asked by another user."
 image:
     path: "/src/assets/card/anniminder.png"
@@ -11,38 +11,35 @@ status: "discontinued"
 from: 2022-07-01
 to: 2023-07-23
 duration: "1 year"
-link: 'https://github.com/TristanB0/Anniminder'
+link: "https://github.com/TristanB0/Anniminder"
 ---
 
 This project is a reminder of birthdays for Discord servers.
 
-
-{ /* Reason to start the project */ }
+{/* Reason to start the project */}
 I started this project when I found people were missing other people's birthday because they were storing it in plain text in a dedicated channel and often people were missing it.
 
-
-{ /* Tools used */ }
+{/* Tools used */}
 I used **Python** for the base of the project (with discord.py API wrapper) and **SQL** to store data in a **SQLite** database.
 
-
-{ /* Explanation */ }
+{/* Explanation */}
 The usage of the bot is very basic since it uses Discord slash commands, as explained below.
 
 When the bot is added in a new server, an ephemeral message is sent which explains how the bot works.
 
 Moreover, when a new user joins a server with Anniminder in it, he receives a private message to be informed of the functioning of the bot.
 
-{ /* List of commands */ }
+{/* List of commands */}
+
 ### Commands
 
 - `/help` shows the help command with every information
-- `/set_channel [channel]` is used to define a specific channel to send birthday messages in (*available only to administrator*)
+- `/set_channel [channel]` is used to define a specific channel to send birthday messages in (_available only to administrator_)
 - `/add_birthday [year] [month] [day]` is used by the users to add or modify their birthday. A confirmation is sent afterward as an ephemeral message
 - `/remove_birthday` can be used by a user who no longer wants to be stored
 - `/get_birthday [user]` is used by anyone who wants to know the birthday of someone else
 
 Finally, when a bot is deleted from a server or when a user leaves a server, every information related to them is removed.
-
 
 ### Planned functionalities
 

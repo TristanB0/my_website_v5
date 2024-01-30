@@ -4,11 +4,14 @@ import PresentationLayout from "../layouts/PresentationLayout.astro";
 import Card from "../components/Card.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
+
+const title = "Tristan Bony - Software Engineering Student";
+const description = "Welcome to Tristan's personal website! You will find my different projects and past experiences.";
 ---
 
 <GlobalLayout
-	title="Tristan Bony - Software Engineering Student"
-	description="Welcome to Tristan's personal website! You will find my different projects and past experiences."
+	title={title}
+	description={description}
 >
 	<main>
 		<PresentationLayout />

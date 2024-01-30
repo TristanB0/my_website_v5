@@ -2,10 +2,12 @@
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 
 const { frontmatter } = Astro.props;
+
+const title = frontmatter.title + " - Tristan Bony";
 ---
 
 <GlobalLayout
-	title={frontmatter.title + " - Tristan Bony"}
+	title={title}
 	description={frontmatter.description}
 >
 	<main
