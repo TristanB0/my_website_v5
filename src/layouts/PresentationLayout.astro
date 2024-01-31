@@ -65,7 +65,7 @@ const emailLink = "mailto:" + email;
 			</p>
 		</article>
 		<aside
-			class="flex flex-col flex-wrap justify-around items-center rounded-2xl shadow-lg xl:flex-[25%] xl:ml-5 dark:bg-gray-700"
+			class="flex flex-col flex-wrap flex-1 justify-around items-center rounded-2xl shadow-lg xl:flex-[25%] xl:ml-5 dark:bg-gray-700"
 		>
 			<div class="w-full h-36 mb-14 bg-blue-500 rounded-t-2xl">
 				<Image
@@ -171,6 +171,14 @@ const emailLink = "mailto:" + email;
 					class="w-8 h-8 m-2 transition duration-300 ease-in-out hidden hover:scale-125 dark:block"
 				>
 					<Icon name="github_white" title="Link to my projects" size={32} class="inline" />
+				</a>
+				<a
+					href="https://codeberg.org/TristanB0"
+					target="_blank"
+					title="My projects but on Codeberg"
+					class="w-8 h-8 m-2 transition duration-300 ease-in-out hover:scale-125"
+				>
+					<Icon name="codeberg" title="My projects but on Codeberg" size={32} class="inline" />
 				</a>
 			</div>
 		</aside>
