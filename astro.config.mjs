@@ -12,7 +12,8 @@ export default defineConfig({
         mdx(),
         icon({
             include: {
-                "material-symbols": ["sunny-outline-rounded", "dark-mode-outline-rounded", "location-on-outline-rounded", "phone-android-outline-rounded", "school-outline-rounded", "mail-outline-rounded", "sim-card-download-outline-rounded"]
+                "material-symbols": ["sunny-outline-rounded", "dark-mode-outline-rounded", "location-on-outline-rounded", "phone-android-outline-rounded", "school-outline-rounded", "mail-outline-rounded", "sim-card-download-outline-rounded"],
+                "simple-icons": ["signal"]
             },
             iconDir: "src/assets/icons",
         })

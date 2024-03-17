@@ -13,6 +13,8 @@ import profilePic from "../assets/profile_pic.jpg";
 
 const education = "Student in CS @ OU && ISIMA";
 const location = "Norman, OK, USA";
+const signal = "TristanB0.742";
+const signalLink = "https://signal.me/#eu/WYwsWB_b4jv31xlz5cVMuqrBngYWG2PbTdAS_EThgpwurUKxcylGoZaV2KAIVN8J";
 const phone = "+33(0)6 42 08 91 17";
 const phoneLink = "tel:" + phone.replaceAll(" ", "").replace("(0)", "");
 const email = "tristan.bony@proton.me";
@@ -92,6 +94,16 @@ const emailLink = "mailto:" + email;
 							<li class="card-li">
 								<Icon name="material-symbols:location-on-outline-rounded" size={16} class="inline" />
 								<span class="text-md">{location}</span>
+							</li>
+							<li class="card-li">
+								<Icon name="simple-icons:signal" size={16} class="inline" />
+								<a
+									href={signalLink}
+									title="Contact me through Signal"
+									class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+								>
+									{signal}
+								</a>
 							</li>
 							<li class="card-li">
 								<Icon name="material-symbols:phone-android-outline-rounded" size={16} class="inline" />
