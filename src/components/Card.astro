@@ -90,16 +90,7 @@ if (!images[image.path] && image.path != null)
 				{cardStatus(status).status}
 			</div>
 		</div>
-		<h2 class="card-title">{title}</h2>
+		<h2 class="card-title"><a class="hover:text-blue-600 focus:text-blue-800" href={href} title={"Read more about " + title}>{title}</a></h2>
 		<p class="justify-normal text-justify text-pretty">{description}</p>
-		<div class="card-actions justify-end">
-			<a
-				class="btn btn-primary bg-blue-500 border-none hover:bg-blue-600 focus:bg-blue-800"
-				href={href}
-				title={"Read more about " + title}
-			>
-				Read more
-			</a>
-		</div>
 	</article>
 </section>
