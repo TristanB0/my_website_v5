@@ -49,6 +49,11 @@ const cardStatus = (status: string) => {
 				color: "text-red-500",
 				status: "Discontinued",
 			};
+		case "hold":
+			return {
+				color: "text-purple-500",
+				status: "On hold",
+			};
 		default:
 			return {
 				color: "hidden",
