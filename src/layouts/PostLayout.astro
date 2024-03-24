@@ -21,7 +21,7 @@ if (!images[frontmatter.image.path] && frontmatter.image.path != null)
 
 <GlobalLayout title={title} description={frontmatter.description}>
 	<main class="flex flex-row flex-wrap w-full p-4 mb-4 bg-white rounded-2xl shadow-lg dark:bg-gray-800">
-		<aside class="w-10 p-4 rounded-2xl shadow-lg xl:flex-[20%] xl:mr-5 dark:bg-gray-700 max-xl:hidden">
+		<aside class="w-10 h-fit p-4 rounded-2xl shadow-lg xl:flex-[20%] xl:mr-5 dark:bg-gray-700 max-xl:hidden">
 			<strong class="text-xl">More info</strong>
 			{
 			frontmatter.image.path ? (<Image
