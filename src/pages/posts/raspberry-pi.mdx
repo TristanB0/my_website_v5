@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 
-title: "Raspberry Pi Projects"
+title: "Raspberry Pi / VPS Projects"
 description: "Multiples projects realized with a Raspberry Pi."
 image:
     path: "/src/assets/card/raspberry_pi_logo.png"
@@ -16,27 +16,27 @@ link: null
 
 import { Image } from "astro:assets";
 
-This page lists all the projects I have made using a Raspberry Pi. They were very interesting to understand how some part of the Internet work. It's also pretty useful to be able to access it anytime and anywhere to learn setting up everything. Moreover, I installed the Raspberry Pi OS Lite (64-bit) to optimize performances and to use it such as a server.
+This page lists all the projects I have made using a Raspberry Pi, or later a VPS. They were very interesting to understand how some part of the Internet work. It's also pretty useful to be able to access the RPi anytime and anywhere to learn setting up everything. Moreover, I installed the **Raspberry Pi OS Lite** (64-bit) to optimize performances and to use it such as a server. On the VPS, I am now using **Debian 12** (64-bit) for performance and stability.
 
-## Host my website
+## Hosting my website
 
-My website runs on the Raspberry Pi thanks to Apache HTTP Server, and since I have my own domain name, I learned to configure DDNS (currently only with IPv4) and other settings such as redirections or subdomains. I installed an SSL certificate from Let's Encrypt to understand how it works and to protect my information of BitWarden and GitLab, which I also plan to self-host.
+In the past, I tried hosting my website on the Raspberry Pi thanks to **Apache HTTP Server**, and since I have my own domain name, I learned to configure **DDNS** with IPv4 and other settings such as redirections or subdomains. I installed an **SSL certificate** from Let's Encrypt to understand how it works. However, I believe I had some problems with DNS propagation because some user were not able to access it, therefore I am no longer hosting it myself.
 
-## Host a VPN and an ad and tracker-blocking application
+## Host a VPN and an ad-and-tracker-blocking application
 
-I wanted to be able to access the french content of services even when I was abroad and add security on public networks, so I installed a VPN which is running WireGuard. Moreover, I installed Pi-hole for even more privacy. It is a network-level advertisement and Internet tracker blocking application that is accessed by setting up the Pi local IP address in the DNS section of a computer.
+I wanted to be able to access the french content of services even when I was abroad and add security on public networks, so I installed a VPN which is running **WireGuard**. Moreover, I installed **Pi-hole** for even more privacy. It is a network-level advertisement and Internet tracker blocking application that is accessed by setting up the Pi local IP address in the DNS section of a computer.
 
 ## Host my Discord bots
 
-It is easy to run Python on GNU/Linux, so here it belongs. I just had to make sure I installed every libraries needed.
+It is easy to run Python on GNU/Linux, so here it belongs. I just had to make sure I installed every libraries needed, but with virtual environments it is very easy to make sure they are all correctly installed and not interfering between projects.
 
 ## Host a Minecraft server
 
-This is just a simple Minecraft server running Paper where I can meet with my friends and create structures of our choices. For now, we have been working on recreating our former school where we met.
+This is just a simple Minecraft server running Paper where I can meet with my friends and create structures of our choices. For now, we have been working on recreating our former school where we met. You can follow the progress of the building at the address http://mc.tristanbony.me:8100 thanks to the plugin BlueMap.
 
 import Minecraft_render from "../../assets/raspberry_pi/Minecraft_render.png";
 
 <figure>
     <Image src={Minecraft_render} alt="Minecraft render of our former school" />
-    <figcaption>Minecraft render of our former school. (Work in progress)</figcaption>
+    <figcaption>Minecraft render of our former school with Overviewer in construction.</figcaption>
 </figure>
