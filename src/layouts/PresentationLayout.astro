@@ -5,189 +5,228 @@ import { Icon } from "astro-icon/components";
 const todaysDate: Date = new Date();
 const birthday: Date = new Date(2000, 4, 16);
 const age: number = Math.floor(
-	(todaysDate.getTime() - birthday.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+    (todaysDate.getTime() - birthday.getTime()) /
+        (1000 * 60 * 60 * 24 * 365.25),
 );
 
 import profilePic from "../assets/profile_pic.jpg";
 
-const education = "Student in CS @ OU && ISIMA";
-const location = "Norman, OK, USA";
+const education = "ISIMA && OU";
+const location = "Lyon, France";
 const signal = "TristanB0.742";
-const signalLink = "https://signal.me/#eu/WYwsWB_b4jv31xlz5cVMuqrBngYWG2PbTdAS_EThgpwurUKxcylGoZaV2KAIVN8J";
+const signalLink =
+    "https://signal.me/#eu/WYwsWB_b4jv31xlz5cVMuqrBngYWG2PbTdAS_EThgpwurUKxcylGoZaV2KAIVN8J";
 const phone = "+33(0)6 42 08 91 17";
 const phoneLink = "tel:" + phone.replaceAll(" ", "").replace("(0)", "");
 const email = "tristan.bony@proton.me";
 const emailLink = "mailto:" + email;
 ---
 
-<main class="flex flex-row flex-wrap w-full p-4 mb-2 bg-white rounded-2xl shadow-lg dark:bg-gray-800">
-	<article class="m-2 text-justify xl:flex-[70%]">
-		<h1 class="mb-10 text-3xl font-bold">Who am I? (Boring version)</h2>
-		<p class="mb-5">
-			Immersed in the world of computer science from a very young age,
-			I quickly became curious to understand the technologies that are
-			part of our daily lives by tinkering and searching for
-			information by myself.
-		</p>
-		<p class="mb-5">
-			That's why I decided to join ISIMA, a French engineering school
-			specialized in computer science after my CPGE at the Edouard
-			Branly high school in Lyon in order to acquire more information
-			and to gain experience to make it my job. These trainings taught
-			me rigor with the help of scientific knowledge like mathematics,
-			industrial sciences, physics and, of course, computer science.
-		</p>
-		<p class="mb-5">
-			My engineering studies have allowed me to acquire skills in C,
-			C++, C# (.NET), Java and SQL which completes my knowledge
-			acquired as a self-taught person, such as Python, HTML, CSS as
-			well as some PHP. Finally, I use GNU/Linux and Windows operating
-			systems.
-		</p>
-		<p class="mb-5">
-			I then had the opportunity to do a double cursus in the
-			University of Oklahoma thanks to my motivation to succeed. I
-			discovered a new way of learning and a new culture.
-		</p>
-		<p class="mb-5">
-			Besides my passion for technology, I also enjoy mountain biking,
-			skiing and billiards (Blackball/Snooker/9-ball). In my free
-			time, I also like to watch movies and series... and cat pictures
-			of course. By the way, I also started playing violin at the age
-			of 4 and traveled a lot.
-		</p>
-		<p class="mb-5">
-			Finally, I studied three languages in addition of French (my
-			native language): English (C1), Spanish (B1) and Mandarin
-			(notions).
-		</p>
-	</article>
-	<aside
-		class="flex flex-col flex-wrap flex-1 justify-around items-center rounded-2xl shadow-lg xl:flex-[25%] xl:ml-5 dark:bg-gray-700"
-	>
-		<div class="w-full h-36 mb-14 bg-blue-500 rounded-t-2xl">
-			<Image
-				class="block w-32 h-auto mt-14 mb-0 mx-auto rounded-2xl"
-				src={profilePic}
-				alt="Picture of me"
-			/>
-		</div>
-		<div class="p-4 mt-4 text-center">
-			<ul>
-				<li>
-					<span class="text-lg font-semibold">
-						Tristan Bony, {age}
-						<span class="italic">(he/him) </span>
-						<Icon name="france" size={24} class="inline" />
-					</span>
-				</li>
-				<li>
-					<Icon name="material-symbols:school-outline-rounded" size={16} class="inline" />
-					<span class="text-md">{education}</span>
-				</li>
-				<li>
-					<address>
-						<li class="card-li">
-							<Icon name="material-symbols:location-on-outline-rounded" size={16} class="inline" />
-							<span class="text-md">{location}</span>
-						</li>
-						<li class="card-li">
-							<Icon name="simple-icons:signal" size={16} class="inline" />
-							<a
-								href={signalLink}
-								title="Contact me through Signal"
-								class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-							>
-								{signal}
-							</a>
-						</li>
-						<li class="card-li">
-							<Icon name="material-symbols:phone-android-outline-rounded" size={16} class="inline" />
-							<a
-								href={phoneLink}
-								title="Message me on Signal"
-								class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-							>
-								{phone}
-							</a>
-						</li>
-						<li class="card-li">
-							<Icon name="material-symbols:mail-outline-rounded" size={16} class="inline" />
-							<a
-								href={emailLink}
-								title="Contact me by email"
-								class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-							>
-								{email}
-							</a>
-						</li>
-					</address>
-				</li>
-				<li>
-					<Icon name="material-symbols:sim-card-download-outline-rounded" size={16} class="inline" />
-					<a
-						href="/pdf/CV_English.pdf"
-						target="_blank"
-						title="Download my CV"
-						class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-					>
-						Download my CV
-					</a>
-				</li>
-				<li>
-					<Icon name="material-symbols:sim-card-download-outline-rounded" size={16} class="inline" />
-					<a
-						href="/pdf/CV_French.pdf"
-						target="_blank"
-						title="Télécharger mon CV"
-						class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-					>
-						Télécharger mon CV
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="flex flex-wrap justify-around items-center pb-4">
-			<a
-				href="https://www.linkedin.com/in/tristanbony/"
-				target="_blank"
-				title="Visit my LinkedIn"
-				class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90"
-			>
-				<Icon name="linkedin" title="Visit my LinkedIn" size={32} />
-			</a>
-			<a
-				href="https://floss.social/@TristanB0"
-				target="_blank"
-				title="Come see my toots"
-				class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90"
-			>
-				<Icon name="mastodon" title="Come see my toots" size={32} />
-			</a>
-			<a
-				href="https://www.github.com/TristanB0"
-				target="_blank"
-				title="Link to my projects"
-				class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90 dark:hidden"
-			>
-				<Icon name="github" title="Link to my projects" size={32} />
-			</a>
-			<a
-				href="https://www.github.com/TristanB0"
-				target="_blank"
-				title="Link to my projects"
-				class="w-8 h-8 m-2 transition duration-300 ease-in-out hidden hover:scale-125 focus:scale-90 dark:inline-block"
-			>
-				<Icon name="github_white" title="Link to my projects" size={32} />
-			</a>
-			<a
-				href="https://codeberg.org/TristanB0"
-				target="_blank"
-				title="My projects but on Codeberg"
-				class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90"
-			>
-				<Icon name="codeberg" title="My projects but on Codeberg" size={32} />
-			</a>
-		</div>
-	</aside>
+<main
+    class="flex flex-row flex-wrap w-full p-4 mb-2 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
+>
+    <article class="m-2 text-justify xl:flex-[70%]">
+        <h1 class="mb-10 text-3xl font-bold">Who am I? (Boring version)</h1>
+        <p class="mb-5">
+            Immersed in the world of computer science from a very young age, I
+            quickly became curious to understand the technologies that are part
+            of our daily lives by tinkering and searching for information by
+            myself.
+        </p>
+        <p class="mb-5">
+            That's why I decided to join ISIMA, a French engineering school
+            specialized in computer science after my CPGE at the Edouard Branly
+            high school in Lyon in order to acquire more information and to gain
+            experience to make it my job. These trainings taught me rigor with
+            the help of scientific knowledge like mathematics, industrial
+            sciences, physics and, of course, computer science.
+        </p>
+        <p class="mb-5">
+            My engineering studies have allowed me to acquire skills in C, C++,
+            C# (.NET), Java and SQL which completes my knowledge acquired as a
+            self-taught person, such as Python, HTML, CSS as well as some PHP.
+            Finally, I use GNU/Linux and Windows operating systems.
+        </p>
+        <p class="mb-5">
+            I then had the opportunity to do a double cursus in the University
+            of Oklahoma thanks to my motivation to succeed. I discovered a new
+            way of learning and a new culture.
+        </p>
+        <p class="mb-5">
+            Besides my passion for technology, I also enjoy mountain biking,
+            skiing and billiards (Blackball/Snooker/9-ball). In my free time, I
+            also like to watch movies and series... and cat pictures of course.
+            By the way, I also started playing violin at the age of 4 and
+            traveled a lot.
+        </p>
+        <p class="mb-5">
+            Finally, I studied three languages in addition of French (my native
+            language): English (C1), Spanish (B1) and Mandarin (notions).
+        </p>
+    </article>
+    <aside
+        class="flex flex-col flex-wrap flex-1 justify-around items-center rounded-2xl shadow-lg xl:flex-[25%] xl:ml-5 dark:bg-gray-700"
+    >
+        <div class="w-full h-36 mb-14 bg-blue-500 rounded-t-2xl">
+            <Image
+                class="block w-32 h-auto mt-14 mb-0 mx-auto rounded-2xl"
+                src={profilePic}
+                alt="Picture of me"
+            />
+        </div>
+        <div class="p-4 mt-4 text-center">
+            <ul>
+                <li>
+                    <span class="text-lg font-semibold">
+                        Tristan Bony, {age}
+                        <span class="italic">(he/him) </span>
+                        <Icon name="france" size={24} class="inline" />
+                    </span>
+                </li>
+                <li>
+                    <Icon
+                        name="material-symbols:school-outline-rounded"
+                        size={16}
+                        class="inline"
+                    />
+                    <span class="text-md">{education}</span>
+                </li>
+                <li>
+                    <address>
+                        <li class="card-li">
+                            <Icon
+                                name="material-symbols:location-on-outline-rounded"
+                                size={16}
+                                class="inline"
+                            />
+                            <span class="text-md">{location}</span>
+                        </li>
+                        <li class="card-li">
+                            <Icon
+                                name="simple-icons:signal"
+                                size={16}
+                                class="inline"
+                            />
+                            <a
+                                href={signalLink}
+                                title="Contact me through Signal"
+                                class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+                            >
+                                {signal}
+                            </a>
+                        </li>
+                        <li class="card-li">
+                            <Icon
+                                name="material-symbols:phone-android-outline-rounded"
+                                size={16}
+                                class="inline"
+                            />
+                            <a
+                                href={phoneLink}
+                                title="Message me on Signal"
+                                class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+                            >
+                                {phone}
+                            </a>
+                        </li>
+                        <li class="card-li">
+                            <Icon
+                                name="material-symbols:mail-outline-rounded"
+                                size={16}
+                                class="inline"
+                            />
+                            <a
+                                href={emailLink}
+                                title="Contact me by email"
+                                class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+                            >
+                                {email}
+                            </a>
+                        </li>
+                    </address>
+                </li>
+                <li>
+                    <Icon
+                        name="material-symbols:sim-card-download-outline-rounded"
+                        size={16}
+                        class="inline"
+                    />
+                    <a
+                        href="/pdf/CV_English.pdf"
+                        target="_blank"
+                        title="Download my CV"
+                        class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+                    >
+                        Download my CV
+                    </a>
+                </li>
+                <li>
+                    <Icon
+                        name="material-symbols:sim-card-download-outline-rounded"
+                        size={16}
+                        class="inline"
+                    />
+                    <a
+                        href="/pdf/CV_French.pdf"
+                        target="_blank"
+                        title="Télécharger mon CV"
+                        class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+                    >
+                        Télécharger mon CV
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-wrap justify-around items-center pb-4">
+            <a
+                href="https://www.linkedin.com/in/tristanbony/"
+                target="_blank"
+                title="Visit my LinkedIn"
+                class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90"
+            >
+                <Icon name="linkedin" title="Visit my LinkedIn" size={32} />
+            </a>
+            <a
+                href="https://floss.social/@TristanB0"
+                rel="me"
+                target="_blank"
+                title="Come see my toots"
+                class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90"
+            >
+                <Icon name="mastodon" title="Come see my toots" size={32} />
+            </a>
+            <a
+                href="https://www.github.com/TristanB0"
+                target="_blank"
+                title="Link to my projects"
+                class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90 dark:hidden"
+            >
+                <Icon name="github" title="Link to my projects" size={32} />
+            </a>
+            <a
+                href="https://www.github.com/TristanB0"
+                target="_blank"
+                title="Link to my projects"
+                class="w-8 h-8 m-2 transition duration-300 ease-in-out hidden hover:scale-125 focus:scale-90 dark:inline-block"
+            >
+                <Icon
+                    name="github_white"
+                    title="Link to my projects"
+                    size={32}
+                />
+            </a>
+            <a
+                href="https://codeberg.org/TristanB0"
+                target="_blank"
+                title="My projects but on Codeberg"
+                class="w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90"
+            >
+                <Icon
+                    name="codeberg"
+                    title="My projects but on Codeberg"
+                    size={32}
+                />
+            </a>
+        </div>
+    </aside>
 </main>

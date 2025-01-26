@@ -5,30 +5,28 @@ import Card from "../components/Card.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
 
-const title = "Tristan Bony - Software Engineering Student";
-const description = "Welcome to Tristan's personal website! You will find my different projects and past experiences.";
+const title = "Tristan Bony - Software Engineer";
+const description =
+    "Welcome to Tristan's personal website! You will find my different projects and past experiences.";
 ---
 
-<GlobalLayout
-	title={title}
-	description={description}
->
-	<main>
-		<PresentationLayout />
+<GlobalLayout title={title} description={description}>
+    <main>
+        <PresentationLayout />
 
-		<div class="flex flex-row flex-wrap justify-center">
-			{
-				allPosts.map((post) => (
-					<Card
-						title={post.frontmatter.title}
-						description={post.frontmatter.description}
-						href={post.url}
-						image={post.frontmatter.image}
-						category={post.frontmatter.category}
-						status={post.frontmatter.status}
-					/>
-				))
-			}
-		</div>
-	</main>
+        <div class="flex flex-row flex-wrap justify-center">
+            {
+                allPosts.map((post) => (
+                    <Card
+                        title={post.frontmatter.title}
+                        description={post.frontmatter.description}
+                        href={post.url}
+                        image={post.frontmatter.image}
+                        category={post.frontmatter.category}
+                        status={post.frontmatter.status}
+                    />
+                ))
+            }
+        </div>
+    </main>
 </GlobalLayout>

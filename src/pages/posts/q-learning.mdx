@@ -4,8 +4,8 @@ layout: ../../layouts/PostLayout.astro
 title: "Q-learning"
 description: "Making of a game and an IA using the C language and SDL2 to find the exit of a maze via the quickest path."
 image:
-    path: "/src/assets/card/q_learning.png"
-    alt: "Screenshot of the game in player mode"
+  path: "/src/assets/card/q_learning.png"
+  alt: "Screenshot of the game in player mode"
 category: "school-project"
 status: "completed"
 from: 2022-06-20
@@ -21,11 +21,11 @@ This is the project we had to do at the end of our first year of engineering sch
 import ia_learning from "../../assets/q_learning/ia_learning.gif";
 
 <figure>
-    <picture>
-        <source srcset={ia_learning.src} />
-        <Image src={ia_learning} alt="IA learning" />
-    </picture>
-    <figcaption>The IA at its first stages of learning.</figcaption>
+  <picture>
+    <source srcset={ia_learning.src} />
+    <Image src={ia_learning} alt="IA learning" />
+  </picture>
+  <figcaption>The IA at its first stages of learning.</figcaption>
 </figure>
 
 Our game is a maze with multiple paths, devided in two parts, to get to the exit, but there is a passage at the center which is mandatory to get to the second part of the game. There are also ennemies located in mutiples dead ends and crossing their line of sight is a game over.
@@ -33,8 +33,8 @@ Our game is a maze with multiple paths, devided in two parts, to get to the exit
 import ia_not_optimal_path from "../../assets/q_learning/ia_not_optimal_path.gif";
 
 <figure>
-    <Image src={ia_not_optimal_path} alt="IA not optimal" />
-    <figcaption>The IA finds the exit but not via the optimal way.</figcaption>
+  <Image src={ia_not_optimal_path} alt="IA not optimal" />
+  <figcaption>The IA finds the exit but not via the optimal way.</figcaption>
 </figure>
 
 One of the challenge is to find the correct balance of settings for it to learn efficiently. An other challenge is to chose the right perceptions of the IA. In our case, we decided it could see 4 cases around it <code>(UP, RIGHT, DOWN, LEFT)</code> and that he could not go back except in case of a dead end.
@@ -42,8 +42,8 @@ One of the challenge is to find the correct balance of settings for it to learn 
 import ia_best_path from "../../assets/q_learning/ia_best_path.gif";
 
 <figure>
-    <Image src={ia_best_path} alt="IA best path" />
-    <figcaption>The IA after it learned during enough time.</figcaption>
+  <Image src={ia_best_path} alt="IA best path" />
+  <figcaption>The IA after it learned during enough time.</figcaption>
 </figure>
 
 We also added a gamemode where the player could solve the maze by himself and we integrated the whole through a menu.
@@ -51,6 +51,6 @@ We also added a gamemode where the player could solve the maze by himself and we
 import player_mode from "../../assets/q_learning/player_mode.png";
 
 <figure>
-    <Image src={player_mode} alt="player mode" />
-    <figcaption>Images of the player mode with updated graphics.</figcaption>
+  <Image src={player_mode} alt="player mode" />
+  <figcaption>Images of the player mode with updated graphics.</figcaption>
 </figure>

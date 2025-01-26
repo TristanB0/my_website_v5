@@ -1,7 +1,7 @@
 ---
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 import { Icon } from "astro-icon/components";
-import { cardTitle, cardStatus } from "../components/Card.astro"
+import { cardTitle, cardStatus } from "../components/Card.astro";
 import { Image } from "astro:assets";
 
 const { frontmatter } = Astro.props;
@@ -11,105 +11,125 @@ const projectDateFrom = new Date(frontmatter.from).toISOString().slice(0, 10);
 const projectDateTo = new Date(frontmatter.to).toISOString().slice(0, 10);
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/card/*.{jpeg,jpg,png,gif}",
+    "/src/assets/card/*.{jpeg,jpg,png,gif}",
 );
 if (!images[frontmatter.image.path] && frontmatter.image.path != null)
-	throw new Error(
-		`"${frontmatter.image.path}" does not exist in glob: "src/assets/card/*.{jpeg,jpg,png,gif}"`,
-	);
+    throw new Error(
+        `"${frontmatter.image.path}" does not exist in glob: "src/assets/card/*.{jpeg,jpg,png,gif}"`,
+    );
 ---
 
 <GlobalLayout title={title} description={frontmatter.description}>
-	<main class="flex flex-row flex-wrap w-full p-4 mb-4 bg-white rounded-2xl shadow-lg dark:bg-gray-800">
-		<aside class="w-10 h-fit p-4 top-4 rounded-2xl shadow-lg sticky xl:flex-[20%] xl:mr-5 dark:bg-gray-700 max-xl:hidden">
-			<strong class="text-xl">More info</strong>
-			{
-			frontmatter.image.path ? (<Image
-				src={images[frontmatter.image.path]()}
-				alt={frontmatter.image.alt}
-				class="w-full h-auto rounded-2xl mt-4"
-			/>) : null
-			}
-			<ul class="list-disc ml-4 mt-4">
-				{
-				frontmatter.status ? (<li>Status: <span class:list={["badge badge-outline", cardStatus(frontmatter.status).color]}>
-				{ cardStatus(frontmatter.status).status }
-				</span></li>) : null
-				}
-				<li>Category: <span class="badge badge-outline text-gray-500 dark:text-gray-300">{cardTitle(frontmatter.category)}</span></li>
-				{
-				frontmatter.duration ? (<li>Duration: {frontmatter.duration}</li>) : null
-				}
-				{
-				frontmatter.from ? (<li>From: {projectDateFrom}</li>) : null
-				}
-				{
-				frontmatter.to ? (<li>To: {projectDateTo}</li>) : null
-				}
-				<li>Language(s): TODO</li>
-				<li>Tags: TODO</li>
-			</ul>
-		</aside>
-		<article class="xl:flex-[75%] max-w-none p-2 bg-white prose
-			
+    <main
+        class="flex flex-row flex-wrap w-full p-4 mb-4 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
+    >
+        <aside
+            class="w-10 h-fit p-4 top-4 rounded-2xl shadow-lg sticky xl:flex-[20%] xl:mr-5 dark:bg-gray-700 max-xl:hidden"
+        >
+            <strong class="text-xl">More info</strong>
+            {
+                frontmatter.image.path ? (
+                    <Image
+                        src={images[frontmatter.image.path]()}
+                        alt={frontmatter.image.alt}
+                        class="w-full h-auto rounded-2xl mt-4"
+                    />
+                ) : null
+            }
+            <ul class="list-disc ml-4 mt-4">
+                {
+                    frontmatter.status ? (
+                        <li>
+                            Status:{" "}
+                            <span
+                                class:list={[
+                                    "badge badge-outline",
+                                    cardStatus(frontmatter.status).color,
+                                ]}
+                            >
+                                {cardStatus(frontmatter.status).status}
+                            </span>
+                        </li>
+                    ) : null
+                }
+                <li>
+                    Category: <span
+                        class="badge badge-outline text-gray-500 dark:text-gray-300"
+                        >{cardTitle(frontmatter.category)}</span>
+                </li>
+                {
+                    frontmatter.duration ? (
+                        <li>Duration: {frontmatter.duration}</li>
+                    ) : null
+                }
+                {frontmatter.from ? <li>From: {projectDateFrom}</li> : null}
+                {frontmatter.to ? <li>To: {projectDateTo}</li> : null}
+                <li>Language(s): TODO</li>
+                <li>Tags: TODO</li>
+            </ul>
+        </aside>
+        <article
+            class="xl:flex-[75%] max-w-none p-2 bg-white prose
 		prose-headings:text-black prose-a:text-blue-500 prose-p:text-justify prose-p:text-gray-800 prose-p:text-pretty prose-li:text-black prose-li:marker:text-black prose-code:bg-slate-200 prose-code:text-sky-700 prose-strong:text-blue-600 prose-figure:w-fit prose-figure:p-2 prose-figure:m-auto prose-figure:border prose-figure:rounded-2xl prose-img:rounded-2xl prose-img:w-full prose-img:max-h-[500px] prose-figcaption:text-center prose-figcaption:text-gray-500
-		
 		dark:prose-invert dark:bg-gray-800
-		
-		dark:prose-a:text-blue-300 dark:prose-headings:text-white dark:prose-p:text-white dark:prose-li:text-white dark:prose-li:marker:text-white dark:prose-code:bg-slate-900 dark:prose-code:text-sky-500 dark:prose-strong:text-blue-500 dark:prose-figcaption:text-gray-400">
-			<div class="flex justify-between">
-				<h1 class="mt-0 text-3xl text-balance">{frontmatter.title}</h1>
-				<div class="links">
-					<a
-						href={"https://github.com/TristanB0/" + frontmatter.link}
-						target="_blank"
-						title="Link to the project"
-						class:list={[
-							"w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90",
-							frontmatter.link ? "dark:hidden" : "hidden",
-						]}
-					>
-						<Icon
-							name="github"
-							title="Link to the project"
-							size={32}
-						/>
-					</a>
-					<a
-						href={"https://github.com/TristanB0/" + frontmatter.link}
-						target="_blank"
-						title="Link to the project"
-						class:list={[
-							"w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90",
-							frontmatter.link
-								? "hidden dark:inline-block"
-								: "hidden",
-						]}
-					>
-						<Icon
-							name="github_white"
-							title="Link to the project"
-							size={32}
-						/>
-					</a>
-					<a
-						href={"https://codeberg.org/TristanB0/" + frontmatter.link}
-						target="_blank"
-						title="Link to the project"
-						class:list={[
-							"w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90",
-							frontmatter.link ? "dark:inline-block" : "hidden",
-						]}
-					>
-						<Icon
-							name="codeberg"
-							title="Link to the project"
-							size={32}
-						/>
-					</a>
-				</div>
-			</div>
-			<slot />
-		</article>
-	</main>
+		dark:prose-a:text-blue-300 dark:prose-headings:text-white dark:prose-p:text-white dark:prose-li:text-white dark:prose-li:marker:text-white dark:prose-code:bg-slate-900 dark:prose-code:text-sky-500 dark:prose-strong:text-blue-500 dark:prose-figcaption:text-gray-400"
+        >
+            <div class="flex justify-between">
+                <h1 class="mt-0 text-3xl text-balance">{frontmatter.title}</h1>
+                <div class="links">
+                    <a
+                        href={"https://github.com/TristanB0/" +
+                            frontmatter.link}
+                        target="_blank"
+                        title="Link to the project"
+                        class:list={[
+                            "w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90",
+                            frontmatter.link ? "dark:hidden" : "hidden",
+                        ]}
+                    >
+                        <Icon
+                            name="github"
+                            title="Link to the project"
+                            size={32}
+                        />
+                    </a>
+                    <a
+                        href={"https://github.com/TristanB0/" +
+                            frontmatter.link}
+                        target="_blank"
+                        title="Link to the project"
+                        class:list={[
+                            "w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90",
+                            frontmatter.link
+                                ? "hidden dark:inline-block"
+                                : "hidden",
+                        ]}
+                    >
+                        <Icon
+                            name="github_white"
+                            title="Link to the project"
+                            size={32}
+                        />
+                    </a>
+                    <a
+                        href={"https://codeberg.org/TristanB0/" +
+                            frontmatter.link}
+                        target="_blank"
+                        title="Link to the project"
+                        class:list={[
+                            "w-8 h-8 m-2 inline-block transition duration-300 ease-in-out hover:scale-125 focus:scale-90",
+                            frontmatter.link ? "dark:inline-block" : "hidden",
+                        ]}
+                    >
+                        <Icon
+                            name="codeberg"
+                            title="Link to the project"
+                            size={32}
+                        />
+                    </a>
+                </div>
+            </div>
+            <slot />
+        </article>
+    </main>
 </GlobalLayout>
