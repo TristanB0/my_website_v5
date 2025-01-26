@@ -9,6 +9,11 @@ const { frontmatter } = Astro.props;
 const title = frontmatter.title + " - Tristan Bony";
 const projectDateFrom = new Date(frontmatter.from).toISOString().slice(0, 10);
 const projectDateTo = new Date(frontmatter.to).toISOString().slice(0, 10);
+let tools = "";
+if (frontmatter.tools) {
+    frontmatter.tools.map((tool: string) => (tools += tool + ", "));
+    tools = tools.slice(0, -2);
+}
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
     "/src/assets/card/*.{jpeg,jpg,png,gif}",
@@ -55,7 +60,8 @@ if (!images[frontmatter.image.path] && frontmatter.image.path != null)
                 <li>
                     Category: <span
                         class="badge badge-outline text-gray-500 dark:text-gray-300"
-                        >{cardTitle(frontmatter.category)}</span>
+                        >{cardTitle(frontmatter.category)}</span
+                    >
                 </li>
                 {
                     frontmatter.duration ? (
@@ -64,8 +70,7 @@ if (!images[frontmatter.image.path] && frontmatter.image.path != null)
                 }
                 {frontmatter.from ? <li>From: {projectDateFrom}</li> : null}
                 {frontmatter.to ? <li>To: {projectDateTo}</li> : null}
-                <li>Language(s): TODO</li>
-                <li>Tags: TODO</li>
+                {frontmatter.tools ? <li>Tools(s): {tools}</li> : null}
             </ul>
         </aside>
         <article
