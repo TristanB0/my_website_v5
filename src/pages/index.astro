@@ -3,7 +3,23 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 import PresentationLayout from "../layouts/PresentationLayout.astro";
 import Card from "../components/Card.astro";
 
-const allPosts = await Astro.glob("../pages/posts/*.mdx");
+interface Frontmatter {
+    frontmatter: {
+        title: string;
+        description: string;
+        image: {
+            path: string;
+            alt: string;
+        };
+        category: string;
+        status: string;
+    };
+    url: string;
+}
+
+const allPosts = Object.values(
+    import.meta.glob<Frontmatter>("../pages/posts/*.mdx", { eager: true }),
+);
 
 const title = "Tristan Bony - Software Engineer";
 const description =
