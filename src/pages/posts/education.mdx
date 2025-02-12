@@ -15,6 +15,8 @@ link: null
 tools: null
 ---
 
+import { Image } from "astro:assets";
+
 My education and my perseverance to succeed has taken me to destinations I only dreamed of when I was younger. Since the first time I went to the USA, I've always wanted to come back for a longer period of time, and the partnership between my French engineering school and the University of Oklahoma made it possible. But to get to ISIMA, I had to go through the CPGE first, 2 years of hard work to prepare for competitive exams which allow students to attend the best engineering schools.
 
 ## CPGE
@@ -28,6 +30,13 @@ On top of that, I also had to complete a project which would count in the exams.
 Even if it was a lot of pressure to attend the CPGE, the atmosphere between each student was very friendly and we helped each other a lot, which makes the experience very interesting and rewarding.
 
 ## ISIMA
+
+import isima_building from "../../assets/education/isima_building.jpg";
+
+<figure>
+  <Image src={isima_building} alt="Main building of ISIMA" />
+  <figcaption>Main building of ISIMA</figcaption>
+</figure>
 
 After my exams, I was admitted to ISIMA (_Superior IT Institute, of Modelisation and their Applications_), an engineering school specialized in computer science. It is situated on the Cézeaux campus in Clermont-Ferrand, a city best known for its volcanoes and the Michelin headquarters. This school is part Clermont-Auvergne INP, a member of the INP group, a network of engineering school which is also a guarantee of quality.
 
@@ -53,7 +62,7 @@ I also learned more about **IoT** devices, **Networks** and **Security and Syste
 
 Regarding the humanities and social sciences, during the year I continued **English** and **Mandarin**, we still had a class of **Expression and Communication** and **Management**, but we also had a class of **Project Management**.
 
-During the year, I also had to do a project in group, I present it in another post: [TIG stack](./tig-stack/), and the end of the year ended with an internship I did at [Invivoo](./invivoo) in Paris.
+During the year, I also had to do a group project, I present it in another post: [TIG stack](./tig-stack/), and the end of the year ended with an internship I did at [Invivoo](./invivoo) in Paris.
 
 ### IsiLabs
 
@@ -65,8 +74,15 @@ Shortly after I arrived at ISIMA, the corridor - where all clubs have a room to 
 
 ## OU
 
+import ou_campus from "../../assets/education/ou_campus.jpg";
+
+<figure>
+  <Image src={ou_campus} alt="Garden in front of OU's library" />
+  <figcaption>University of Oklahoma "South Oval"</figcaption>
+</figure>
+
 Rather than doing my last year at ISIMA, a partnership with my school and the University of Oklahoma allowed me to fly to the USA to obtain a double degree.
 
-The main difference with the university in the USA, is that I can choose my classes. I wanted to continue to learn more about software engineering but also some new technologies, so I took classes in **Algorithm Analysis**, **Computer Architecture** to learn about **assembly**, **Blockchain and Cryptocurrencies**, **PDN Programming**, **Distributed Operating Systems**, **Computer Security** as well as **Data Networks** and **Computational Learning Theory** to complete my coursework.
+The main difference with the university in the USA, is that I can choose my courses. I wanted to continue to learn more about software engineering but also some new technologies, so I took classes in **Algorithm Analysis**, **Computer Architecture** to learn about **assembly**, **Blockchain and Cryptocurrencies**, **PDN Programming**, **Distributed Operating Systems**, **Computer Security** as well as **Data Networks** and **Computational Learning Theory** to complete my coursework.
 
-I am doing the **Master's Thesis** program, and will update this post as soon as I finish it.
+During this program, I did a master's thesis entitled <a href="/pdf/MS_Thesis.pdf" title="Download my MS Thesis">"Evaluating the Impact of External Factors on the Stability of the Ethereum Network"</a>. In brief, I studied how external factors such as cyber threats, geomagnetic activity, and media coverage, have an impact on the network of this blockchain. In the end, I found that they don't have a visible impact, at least based on the time range studied of a few months and the data we collected, but that the nature and volume of cyber attacks vary between the blockchain's nodes in comparison to other servers.

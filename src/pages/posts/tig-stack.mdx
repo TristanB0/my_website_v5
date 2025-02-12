@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/PostLayout.astro
 
-title: "TIG Stack (WIP)"
+title: "TIG Stack for classroom monitoring"
 description: "Stack to monitor data from Clermont-Auvergne INP classrooms"
 image:
-  path: null
-  alt: null
+  path: "/src/assets/card/tig_stack.png"
+  alt: "Telegraf, InfluxDB and Grafana"
 category: "school-project"
 status: "completed"
 from: 2022-12-12
@@ -15,4 +15,8 @@ link: null
 tools: ["Docker", "Telegraf", "InfluxDB", "Grafana"]
 ---
 
-(Work in progress)
+During my second year at ISIMA, I had to do a group project, whose goal was to create a tool to analyze the data from sensors in the university classrooms. A professor not specialized in managing this type of tools had an initial version for his specific use-case, and the point was to improve it so it would be used more globally.
+
+Our version make use of the TIG stack, in other words, **Telegraf**, **InfluxDB** and **Grafana**. Telegraf is used to collect the data from the sensors connected to The Things Network, InfluxDB to store the data and Grafana to visualize it. Each of them required a specific configuration to work together, and we also developed a minimal program to create them based on the wishes of those who would use it. Finally, we made sure everything would run in a Docker container so it would be easy to deploy and maintain.
+
+The challenging part was to understand how each of the tools worked, and how to make them work together. At the time, we didn't know how to use Docker, so we had to learn it on the fly. We also had to keep in mind that it needed to be scalable and secure.
