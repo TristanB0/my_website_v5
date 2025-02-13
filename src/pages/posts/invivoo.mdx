@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 
-title: "INVIVOO Internship (WIP)"
+title: "INVIVOO Internship"
 description: "Matching project between CVs and call for tenders done for and at the company INVIVOO."
 image:
   path: "/src/assets/card/invivoo.png"
@@ -15,10 +15,14 @@ link: null
 tools: ["C#/.NET", "Azure Functions", "Azure Cosmos DB", "OpenAI"]
 ---
 
-(Work in progress)
+As part of the education I received at ISIMA, I had to do an internship at the end of my second year. I was welcome by **INVIVOO**, an IT consulting company which also creates softwares for monitoring services, creating workflows, and even a chatbot among others. It is situated in Paris La Défense, and it lasted 4 months.
 
-As part of the education I received at ISIMA, I had to do an internship at the end of my second year. I went to **INVIVOO** situated in La Défense, an IT consulting company which has also created softwares for monitoring services, creating workflows and others.
+My job was to begin a project to match CVs of employees with call for tenders to have the best candidates to complete missions.
 
-My job was to start a project to match CVs with call for tenders to have the best candidates to be sent on a mission.
+To realize it, I have been using **C#** to create APIs published on **Azure Functions** and stored all necessary information in a **Cosmos DB** database. To help with the matching, I have used the **OpenAI** API to create embeddings of some information from the CVs but also tried a more precise comparison focusing on skills and keywords.
 
-To realize this, I have been using **C#** to create APIs published on **Azure Functions** and stored all necessary information in a **Cosmos DB** database. To help with the matching, I have used the **OpenAI** API to create embeddings of some information from the CVs but also tried a more precise comparison focusing on skills and keywords.
+All documents are initially parsed with **Tika**, a tool from Apache available as a Docker image to extract the text from a PDF or a DOCX for example. Then, the text is sent to Azure OpenAI to classify every bit of information and store it in a database to have all the useful information in one place with the JSON format we wanted to work with. The prompt is one of the most important part of this step, and the output must be checked everytime to be sure it worked properly.
+
+We can now compare the CVs with the call for tenders, either through the keywords directly or, through the embeddings of some chosen data. In the latter case, we use the cosine similarity to estimate the difference. To be sure it works, NUnit tests are written with demo files.
+
+In the end, some biases have been found in the results, such as the use by someone of a lot of keywords in their CV, proving that a human is still needed to validate the results. Moreover, we tried to add different calculation to balance the results, which actually improved the results. The tool still has a lot of improvements that can be done, and future interns will also work on it, but the version I worked on is already a good starting point with potential.
