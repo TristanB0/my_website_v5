@@ -1,0 +1,30 @@
+---
+layout: ../../layouts/PostLayout.astro
+
+title: "TrackerCheck (Rocket League Plugin)"
+description: "Rocket League plugin to open the tracker of a player in 2 clicks, and some neat features."
+image:
+  path: "src/assets/card/trackercheck.jpg"
+  alt: "Interface of the plugin that redirects to a specific tracker"
+category: "achievement"
+status: "in-progress"
+from: 2025-01-13
+to: null
+duration: null
+link: "TrackerCheck"
+tools: ["C++"]
+---
+
+{/* Goal of the project */}
+The main goal of the project is to facilitate the opening of the tracker of a player in a game.
+
+{/* Reason to start the project */}
+I often watch streamers wanting to open a tracker of a player but have to manually enter its name in RLTracker if they use Epic Games, or have to open their Steam profile first in the best case to get the Steam ID. That specific problem gave me the idea of writing a plugin to make it easier. Moreover, it allows Epic users to open a Steam profile when applicable, for whatever reason they would need to do so.
+
+{/* Tools used */}
+To achieve this, I used the BakkesMod SDK written in C++.
+
+{/* Explanation */}
+Pressing F7 will open a window displaying all players sorted by team. Clicking on a player’s username will open their profile page on https://rocketleague.tracker.network in the default browser.
+
+In the settings, one can change the default key to open the plugin window, but also configure if they want to see the spectator list in addition to the players.
