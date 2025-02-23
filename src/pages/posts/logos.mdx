@@ -15,8 +15,79 @@ link: null
 tools: null
 ---
 
+import { Image } from "astro::assets";
+
 (Work in progress)
 
-One of the first thing I did with a computer is drawing. When I learned about advanced tools, I started making logos for my own use for fun. I do not consider myself an artist, quite the contrary, but I like my ideas and what I have done with them. What follows are my attempts to do logos for different reasons.
+One of the first thing I did with a computer is drawing. When I learned about advanced tools, I started making logos for my own use for fun. I do not consider myself an artist, quite the contrary, but I like my ideas and what I have done with them. What follows are my attempts to do logos for different reasons, from personal personal projects and experiments to concretize ideas of others.
 
-{/* Add logos with context */}
+I never wanted to use a downloaded image as a profile picture, nor show myself, that's how I started creating my own logos, initially with Photoshop, then Illustrator, and in the future probably with Inkscape. It lead to this first creation, in which I mostly added letters from my former pseudo, and some background colors to make it nicer and different when it is displayed as a circle or a square.
+
+import logo_tnt from "../../assets/logos/Logo_TNT.png";
+
+<figure>
+  <Image
+    src={logo_tnt}
+    alt="Letters T N T in blue and light gray on a dark gray background"
+  />
+  <figcaption>My first ever logo, when I had a different pseudo</figcaption>
+</figure>
+
+When I decided to get rid of my former pseudo, I just went with my initials TB. In this first version, I decided to have something simple, with more light, but I kept the same color palette. Actually, it is the same color palette for the next one as well. In addition, I did not want to have a flat background, so I added a small paper texture.
+
+import logo_tb1 from "../../assets/logos/Logo_TristanB.png";
+
+<figure>
+  <Image
+    src={logo_tb1}
+    alt="Letters T B in blue and dark gray on a white background, sticked together"
+  />
+  <figcaption>First logo with the initials of my name</figcaption>
+</figure>
+
+The next iteration of my logo was a complete experiment, I wanted to only outline specific places of the letters so they are readable but not in their usual form. I came with the idea of these sticks, however I feel like there is something missing but couldn't find how to improve it.
+
+import logo_tb2 from "../../assets/logos/Logo_TristanB_v2.jpg";
+
+<figure>
+  <Image
+    src={logo_tb2}
+    alt="Letters T B in blue and dark gray on a white background, stylized as sticks"
+  />
+  <figcaption>Experimental update, with a light/spaced aspect</figcaption>
+</figure>
+
+In this third version, I went with a thicker design with each letter color to outline the other. Some inclination is added to prevent a too boring design.
+
+import logo_tb3 from "../../assets/logos/Logo_TristanB_v3.jpg";
+
+<figure>
+  <Image
+    src={logo_tb3}
+    alt="Letters T B in blue and dark gray, with a each others colors as letter delimiters, on a white background"
+  />
+  <figcaption>Update with a bolder aspect, and play with colors</figcaption>
+</figure>
+
+This next logo is actually designed by friends, I just did the digital version to be used on a website. This was for a school project called BuzzWall69, which also had a Swiss equivalent called BuzzWall24.
+
+import logo_bw69 from "../../assets/logos/Logo_BuzzWall69.svg";
+
+<figure>
+  <Image
+    src={logo_bw69}
+    alt="Letters B W with a wall aspect in dark gray, and number 69 in blue and red, there is a white star in the background"
+  />
+  <figcaption>
+    Logo for the BuzzWall69 project, designed on paper by friends
+  </figcaption>
+</figure>
+
+Finally, I always liked low poly creations, so I tried to do mine with my face. The result is definitely not amazing but it inspired me to do another one in the future.
+
+import low_poly from "../../assets/logos/Low_Poly_Tristan.png";
+
+<figure>
+  <Image src={low_poly} alt="My face built with triangles" />
+  <figcaption>First time trying a low poly project with my own face</figcaption>
+</figure>
