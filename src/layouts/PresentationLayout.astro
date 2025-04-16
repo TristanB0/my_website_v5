@@ -6,18 +6,16 @@ const todaysDate: Date = new Date();
 const birthday: Date = new Date(2000, 4, 16);
 const age: number = Math.floor(
     (todaysDate.getTime() - birthday.getTime()) /
-        (1000 * 60 * 60 * 24 * 365.25),
+        (1000 * 60 * 60 * 24 * 365.2425),
 );
 
 import profilePic from "../assets/profile_pic.jpg";
 
-const education = "ISIMA && OU";
+const education = "CPGE && ISIMA && OU";
 const location = "Lyon, France";
 const signal = "TristanB0.742";
 const signalLink =
     "https://signal.me/#eu/WYwsWB_b4jv31xlz5cVMuqrBngYWG2PbTdAS_EThgpwurUKxcylGoZaV2KAIVN8J";
-const phone = "+33(0)6 42 08 91 17";
-const phoneLink = "tel:" + phone.replaceAll(" ", "").replace("(0)", "");
 const email = "contact@tristanbony.me";
 const emailLink = "mailto:" + email;
 ---
@@ -25,46 +23,57 @@ const emailLink = "mailto:" + email;
 <main
     class="flex flex-row flex-wrap w-full p-4 mb-2 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
 >
-    <article class="m-2 text-justify xl:flex-[70%]">
-        <h1 class="mb-10 text-3xl font-bold">
-            Who am I? (Boring version until new idea)
-        </h1>
-        <p class="mb-5">
-            Immersed in the world of computer science from a very young age, I
-            quickly became curious to understand the technologies that are part
-            of our daily lives by tinkering and searching for information by
-            myself.
-        </p>
-        <p class="mb-5">
-            That's why, after my CPGE at the Edouard Branly high school in Lyon,
-            I decided to join ISIMA, a French engineering school specialized in
-            computer science, to get more information and experience to make it
-            my profession. These preparatory courses taught me rigor with the
-            help of scientific knowledge such as mathematics, industrial
-            sciences, physics and, of course, computer science.
-        </p>
-        <p class="mb-5">
-            My engineering studies allowed me to acquire skills in C, C++, C#
-            (.NET), Java and SQL, which complement my self-taught skills in
-            Python, HTML, CSS and Rust. Finally, I use GNU/Linux and Windows
-            operating systems.
-        </p>
-        <p class="mb-5">
-            Then, thanks to my motivation to succeed, I had the opportunity to
-            do a double degree at the University of Oklahoma. I discovered a new
-            way of learning and a new culture.
-        </p>
-        <p class="mb-5">
-            Besides my passion for technology, I also enjoy mountain biking,
-            skiing and billiards (Blackball/Snooker/9-ball). In my free time, I
-            also like to watch movies and series... and of course cat pictures.
-            By the way, I also started playing the violin at the age of 4 and
-            traveled a lot.
-        </p>
-        <p class="mb-5">
-            Finally, I studied three languages in addition to French (my native
-            language): English (C1), Spanish (B1) and Mandarin (notions).
-        </p>
+    <article class="m-2 xl:flex-[70%]">
+        <div class="max-w-2xl xl:max-w-5xl mx-auto">
+            <div
+                class="bg-gray-100 rounded-2xl shadow-lg overflow-scroll dark:bg-gray-900"
+            >
+                <div
+                    class="p-6 font-mono whitespace-pre leading-normal overflow-x-auto"
+                >
+                    <pre
+                        class="inline text-green-500 dark:text-green-400 font-bold">tristan@website:~$</pre>
+                    <pre
+                        class="inline text-blue-500 dark:text-blue-400">whoami</pre>
+
+                    <pre
+                        class="text-gray-500 dark:text-gray-400">
+<span class="text-red-500 dark:text-red-400">SoftwareEngineer</span> {'{'}
+    <span class="text-pink-500 dark:text-pink-400">Background</span> {'{'}
+        <span class="text-purple-600 dark:text-purple-400">passion</span>: <span class="text-amber-600 dark:text-amber-400">"Immersed in computer science from a young age, curious about technologies"</span>,
+        <span class="text-purple-600 dark:text-purple-400">motivation</span>: <span class="text-amber-600 dark:text-amber-400">"Tinkerer and self-learner, passionate about understanding what makes things work"</span>,
+    {'}'},
+    <span class="text-pink-500 dark:text-pink-400">Education</span> {'{'}
+        <span class="text-purple-600 dark:text-purple-400">prep_courses</span>: <span class="text-amber-600 dark:text-amber-400">"CPGE TSI at Edouard Branly high school in Lyon - Gained scientific rigor"</span>,
+        <span class="text-purple-600 dark:text-purple-400">engineering</span>: <span class="text-amber-600 dark:text-amber-400">"ISIMA - Engineering school specialized in computer science"</span>,
+        <span class="text-purple-600 dark:text-purple-400">double_degree</span>: <span class="text-amber-600 dark:text-amber-400">"University of Oklahoma - Discovered new learning methods and culture"</span>,
+    {'}'},
+    <span class="text-pink-500 dark:text-pink-400">Skills</span> {'{'}
+        <span class="text-purple-600 dark:text-purple-400">taught</span>: [<span class="text-amber-600 dark:text-amber-400">"C"</span>, <span class="text-amber-600 dark:text-amber-400">"C++"</span>, <span class="text-amber-600 dark:text-amber-400">"C# (.NET)"</span>, <span class="text-amber-600 dark:text-amber-400">"Java"</span>, <span class="text-amber-600 dark:text-amber-400">"SQL"</span>],
+        <span class="text-purple-600 dark:text-purple-400">self_learned</span>: [<span class="text-amber-600 dark:text-amber-400">"Python"</span>, <span class="text-amber-600 dark:text-amber-400">"HTML"</span>, <span class="text-amber-600 dark:text-amber-400">"CSS"</span>, <span class="text-amber-600 dark:text-amber-400">"Rust"</span>],
+        <span class="text-purple-600 dark:text-purple-400">os</span>: [<span class="text-amber-600 dark:text-amber-400">"GNU/Linux"</span>, <span class="text-amber-600 dark:text-amber-400">"Windows"</span>],
+    {'}'},
+    <span class="text-pink-500 dark:text-pink-400">Interests</span>: [
+        (<span class="text-amber-600 dark:text-amber-400">"Sports"</span>, [<span class="text-amber-600 dark:text-amber-400">"Mountain biking"</span>, <span class="text-amber-600 dark:text-amber-400">"Skiing"</span>, <span class="text-amber-600 dark:text-amber-400">"Billiards (Blackball/Snooker/9-ball)"</span>]),
+        (<span class="text-amber-600 dark:text-amber-400">"Music"</span>, [<span class="text-amber-600 dark:text-amber-400">"Violin (since age 4)"</span>, <span class="text-amber-600 dark:text-amber-400">"3 years in a Rock band"</span>]),
+        (<span class="text-amber-600 dark:text-amber-400">"Travels"</span>, [<span class="text-amber-600 dark:text-amber-400">"USA"</span>, <span class="text-amber-600 dark:text-amber-400">"Europe"</span>, <span class="text-amber-600 dark:text-amber-400">"Russia"</span>, <span class="text-amber-600 dark:text-amber-400">"and a lot more..."</span>]),
+        (<span class="text-amber-600 dark:text-amber-400">"Video Games"</span>, [<span class="text-amber-600 dark:text-amber-400">"Portal"</span>, <span class="text-amber-600 dark:text-amber-400">"Trackmania"</span>, <span class="text-amber-600 dark:text-amber-400">"Rocket League"</span>]),
+        (<span class="text-amber-600 dark:text-amber-400">"Others"</span>, [<span class="text-amber-600 dark:text-amber-400">"Movies"</span>, <span class="text-amber-600 dark:text-amber-400">"Series"</span>, <span class="text-amber-600 dark:text-amber-400">"Cats"</span>, <span class="text-amber-600 dark:text-amber-400">"FLOSS"</span>, <span class="text-amber-600 dark:text-amber-400">"Cars"</span>]),
+    ],
+    <span class="text-pink-500 dark:text-pink-400">Languages</span>: [
+        (<span class="text-amber-600 dark:text-amber-400">"French"</span>, <span class="text-amber-600 dark:text-amber-400">"Native"</span>),
+        (<span class="text-amber-600 dark:text-amber-400">"English"</span>, <span class="text-amber-600 dark:text-amber-400">"C1 (TOEIC: 975/990; TOEFL: 99/120"</span>)),
+        (<span class="text-amber-600 dark:text-amber-400">"Spanish"</span>, <span class="text-amber-600 dark:text-amber-400">"B1"</span>),
+        (<span class="text-amber-600 dark:text-amber-400">"Mandarin"</span>, <span class="text-amber-600 dark:text-amber-400">"Notions"</span>),
+    ],
+{'}'}</pre>
+                    <pre
+                        class="inline text-green-500 dark:text-green-400 font-bold">tristan@website:~$</pre>
+                    <pre
+                        class="inline border-r-2 border-blue-500 dark:border-blue-400 pr-0.5"></pre>
+                </div>
+            </div>
+        </div>
     </article>
     <aside
         class="flex flex-col flex-wrap flex-1 justify-around items-center rounded-2xl shadow-lg xl:flex-[25%] xl:ml-5 dark:bg-gray-700"
@@ -119,20 +128,6 @@ const emailLink = "mailto:" + email;
                         </li>
                         <li class="card-li">
                             <Icon
-                                name="material-symbols:phone-android-outline-rounded"
-                                size={16}
-                                class="inline"
-                            />
-                            <a
-                                href={phoneLink}
-                                title="Message me on Signal"
-                                class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
-                            >
-                                {phone}
-                            </a>
-                        </li>
-                        <li class="card-li">
-                            <Icon
                                 name="material-symbols:mail-outline-rounded"
                                 size={16}
                                 class="inline"
@@ -175,6 +170,21 @@ const emailLink = "mailto:" + email;
                         class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
                     >
                         Télécharger mon CV
+                    </a>
+                </li>
+                <li>
+                    <Icon
+                        name="material-symbols:web"
+                        size={16}
+                        class="inline"
+                    />
+                    <a
+                        href="https://blog.tristanbony.me"
+                        target="_blank"
+                        title="Visit my blog"
+                        class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
+                    >
+                        Visit my blog
                     </a>
                 </li>
             </ul>
