@@ -23,6 +23,7 @@ export default defineConfig({
           "school-outline-rounded",
           "mail-outline-rounded",
           "sim-card-download-outline-rounded",
+          "web",
         ],
         "simple-icons": ["signal"],
       },
