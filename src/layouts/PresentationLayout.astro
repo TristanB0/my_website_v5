@@ -18,60 +18,86 @@ const signalLink =
     "https://signal.me/#eu/WYwsWB_b4jv31xlz5cVMuqrBngYWG2PbTdAS_EThgpwurUKxcylGoZaV2KAIVN8J";
 const email = "contact@tristanbony.me";
 const emailLink = "mailto:" + email;
+const frenchPdf = "/pdf/CV_French.pdf";
+const englishPdf = "/pdf/CV_English.pdf";
+const blogLink = "https://blog.tristanbony.me";
 ---
 
 <main
     class="flex flex-row flex-wrap w-full p-4 mb-2 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
 >
     <article class="m-2 xl:flex-[70%]">
-        <div class="max-w-2xl xl:max-w-5xl mx-auto">
+        <h1 class="mb-10 text-3xl font-bold">
+            <pre
+                class="inline text-green-500 dark:text-green-400 font-bold">tristan@website:~${'>'}</pre>
+            <pre class="inline text-blue-500 dark:text-blue-400">whoami</pre>
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div
-                class="bg-gray-100 rounded-2xl shadow-lg overflow-scroll dark:bg-gray-900"
+                class="bg-gray-100 rounded-2xl p-6 border-l-4 border-sky-400 shadow-md dark:bg-gray-900"
             >
-                <div
-                    class="p-6 font-mono whitespace-pre leading-normal overflow-x-auto"
-                >
-                    <pre
-                        class="inline text-green-500 dark:text-green-400 font-bold">tristan@website:~$</pre>
-                    <pre
-                        class="inline text-blue-500 dark:text-blue-400">whoami</pre>
+                <h3 class="text-xl font-semibold text-sky-400">Tech Skills</h3>
+                <ul class="pl-4 list-disc marker:text-sky-400">
+                    <li>
+                        <b>Taught</b>: C, C++, C# (.NET), Java, SQL, JS (React)
+                    </li>
+                    <li>
+                        <b>Self-learned</b>: Python, HTML, CSS, JS (Astro), Rust
+                    </li>
+                    <li><b>OS</b>: GNU/Linux, Windows</li>
+                    <li>
+                        <b>Tools</b>: Git (GitHub, GitLab, Bitbucket), Docker
+                    </li>
+                </ul>
+            </div>
 
-                    <pre
-                        class="text-gray-500 dark:text-gray-400">
-<span class="text-red-500 dark:text-red-400">SoftwareEngineer</span> {'{'}
-    <span class="text-pink-500 dark:text-pink-400">Background</span> {'{'}
-        <span class="text-purple-600 dark:text-purple-400">passion</span>: <span class="text-amber-600 dark:text-amber-400">"Immersed in computer science from a young age, curious about technologies"</span>,
-        <span class="text-purple-600 dark:text-purple-400">motivation</span>: <span class="text-amber-600 dark:text-amber-400">"Tinkerer and self-learner, passionate about understanding what makes things work"</span>,
-    {'}'},
-    <span class="text-pink-500 dark:text-pink-400">Education</span> {'{'}
-        <span class="text-purple-600 dark:text-purple-400">prep_courses</span>: <span class="text-amber-600 dark:text-amber-400">"CPGE TSI at Edouard Branly high school in Lyon - Gained scientific rigor"</span>,
-        <span class="text-purple-600 dark:text-purple-400">engineering</span>: <span class="text-amber-600 dark:text-amber-400">"ISIMA - Engineering school specialized in computer science"</span>,
-        <span class="text-purple-600 dark:text-purple-400">double_degree</span>: <span class="text-amber-600 dark:text-amber-400">"University of Oklahoma - Discovered new learning methods and culture"</span>,
-    {'}'},
-    <span class="text-pink-500 dark:text-pink-400">Skills</span> {'{'}
-        <span class="text-purple-600 dark:text-purple-400">taught</span>: [<span class="text-amber-600 dark:text-amber-400">"C"</span>, <span class="text-amber-600 dark:text-amber-400">"C++"</span>, <span class="text-amber-600 dark:text-amber-400">"C# (.NET)"</span>, <span class="text-amber-600 dark:text-amber-400">"Java"</span>, <span class="text-amber-600 dark:text-amber-400">"SQL"</span>],
-        <span class="text-purple-600 dark:text-purple-400">self_learned</span>: [<span class="text-amber-600 dark:text-amber-400">"Python"</span>, <span class="text-amber-600 dark:text-amber-400">"HTML"</span>, <span class="text-amber-600 dark:text-amber-400">"CSS"</span>, <span class="text-amber-600 dark:text-amber-400">"Rust"</span>],
-        <span class="text-purple-600 dark:text-purple-400">os</span>: [<span class="text-amber-600 dark:text-amber-400">"GNU/Linux"</span>, <span class="text-amber-600 dark:text-amber-400">"Windows"</span>],
-    {'}'},
-    <span class="text-pink-500 dark:text-pink-400">Interests</span>: [
-        (<span class="text-amber-600 dark:text-amber-400">"Sports"</span>, [<span class="text-amber-600 dark:text-amber-400">"Mountain biking"</span>, <span class="text-amber-600 dark:text-amber-400">"Skiing"</span>, <span class="text-amber-600 dark:text-amber-400">"Billiards (Blackball/Snooker/9-ball)"</span>]),
-        (<span class="text-amber-600 dark:text-amber-400">"Music"</span>, [<span class="text-amber-600 dark:text-amber-400">"Violin (since age 4)"</span>, <span class="text-amber-600 dark:text-amber-400">"3 years in a Rock band"</span>]),
-        (<span class="text-amber-600 dark:text-amber-400">"Travels"</span>, [<span class="text-amber-600 dark:text-amber-400">"USA"</span>, <span class="text-amber-600 dark:text-amber-400">"Europe"</span>, <span class="text-amber-600 dark:text-amber-400">"Russia"</span>, <span class="text-amber-600 dark:text-amber-400">"and a lot more..."</span>]),
-        (<span class="text-amber-600 dark:text-amber-400">"Video Games"</span>, [<span class="text-amber-600 dark:text-amber-400">"Portal"</span>, <span class="text-amber-600 dark:text-amber-400">"Trackmania"</span>, <span class="text-amber-600 dark:text-amber-400">"Rocket League"</span>]),
-        (<span class="text-amber-600 dark:text-amber-400">"Others"</span>, [<span class="text-amber-600 dark:text-amber-400">"Movies"</span>, <span class="text-amber-600 dark:text-amber-400">"Series"</span>, <span class="text-amber-600 dark:text-amber-400">"Cats"</span>, <span class="text-amber-600 dark:text-amber-400">"FLOSS"</span>, <span class="text-amber-600 dark:text-amber-400">"Cars"</span>]),
-    ],
-    <span class="text-pink-500 dark:text-pink-400">Languages</span>: [
-        (<span class="text-amber-600 dark:text-amber-400">"French"</span>, <span class="text-amber-600 dark:text-amber-400">"Native"</span>),
-        (<span class="text-amber-600 dark:text-amber-400">"English"</span>, <span class="text-amber-600 dark:text-amber-400">"C1 (TOEIC: 975/990; TOEFL: 99/120"</span>)),
-        (<span class="text-amber-600 dark:text-amber-400">"Spanish"</span>, <span class="text-amber-600 dark:text-amber-400">"B1"</span>),
-        (<span class="text-amber-600 dark:text-amber-400">"Mandarin"</span>, <span class="text-amber-600 dark:text-amber-400">"Notions"</span>),
-    ],
-{'}'}</pre>
-                    <pre
-                        class="inline text-green-500 dark:text-green-400 font-bold">tristan@website:~$</pre>
-                    <pre
-                        class="inline border-r-2 border-blue-500 dark:border-blue-400 pr-0.5"></pre>
-                </div>
+            <div
+                class="bg-gray-100 rounded-2xl p-6 border-l-4 border-lime-400 shadow-md dark:bg-gray-900"
+            >
+                <h3 class="text-xl font-semibold text-lime-400">Education</h3>
+                <ul class="pl-4 list-disc marker:text-lime-400">
+                    <li>
+                        <b>CPGE TSI</b> - Strong foundation in Mathematics, Physics,
+                        and Industrial Sciences
+                    </li>
+                    <li><b>ISIMA</b> - Engineering School in CS</li>
+                    <li><b>University of Oklahoma</b> - MS Degree in CS</li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-gray-100 rounded-2xl p-6 border-l-4 border-red-400 shadow-md dark:bg-gray-900"
+            >
+                <h3 class="text-xl font-semibold text-red-400">Interests</h3>
+                <ul class="pl-4 list-disc marker:text-red-400">
+                    <li>
+                        <b>Sports</b>: Mountain Biking, Skiing, Billards
+                        (Blackball/Snooker/9-ball)
+                    </li>
+                    <li>
+                        <b>Music</b>: Violin (started at age 4), 3 years in a
+                        Rock band
+                    </li>
+                    <li>
+                        <b>Video Games</b>: Portal, Trackmania, Rocket League
+                    </li>
+                    <li><b>Travels:</b>USA, Europe, Russia, and many others</li>
+                    <li>
+                        <b>Other</b>: Movies, Series, Cat lover, FLOSS, Cars
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-gray-100 rounded-2xl p-6 border-l-4 border-amber-400 shadow-md dark:bg-gray-900"
+            >
+                <h3 class="text-xl font-semibold text-amber-400">Languages</h3>
+                <ul class="pl-4 list-disc marker:text-amber-400">
+                    <li><b>French</b>: Native</li>
+                    <li><b>English</b>: C1 (TOEFL: 99/120, TOEIC: 975/990)</li>
+                    <li><b>Spanish</b>: B1</li>
+                    <li><b>Mandarin</b>: Notions</li>
+                </ul>
             </div>
         </div>
     </article>
@@ -149,7 +175,7 @@ const emailLink = "mailto:" + email;
                         class="inline"
                     />
                     <a
-                        href="/pdf/CV_English.pdf"
+                        href={englishPdf}
                         target="_blank"
                         title="Download my CV"
                         class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
@@ -164,7 +190,7 @@ const emailLink = "mailto:" + email;
                         class="inline"
                     />
                     <a
-                        href="/pdf/CV_French.pdf"
+                        href={frenchPdf}
                         target="_blank"
                         title="Télécharger mon CV"
                         class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
@@ -179,7 +205,7 @@ const emailLink = "mailto:" + email;
                         class="inline"
                     />
                     <a
-                        href="https://blog.tristanbony.me"
+                        href={blogLink}
                         target="_blank"
                         title="Visit my blog"
                         class="text-md hover:underline hover:decoration-blue-500 hover:decoration-2"
