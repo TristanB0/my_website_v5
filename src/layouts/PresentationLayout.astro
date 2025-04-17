@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
 const todaysDate: Date = new Date();
-const birthday: Date = new Date(2000, 4, 16);
+const birthday: Date = new Date(2000, 3, 16); // April 16, 2000
 const age: number = Math.floor(
     (todaysDate.getTime() - birthday.getTime()) /
         (1000 * 60 * 60 * 24 * 365.2425),
@@ -57,11 +57,11 @@ const blogLink = "https://blog.tristanbony.me";
                 <h3 class="text-xl font-semibold text-lime-400">Education</h3>
                 <ul class="list-disc pl-4 marker:text-lime-400">
                     <li>
-                        <b>CPGE TSI</b> - Strong foundation in Mathematics, Physics,
-                        and Industrial Sciences
+                        <b>CPGE TSI</b>: Strong foundation in Mathematics,
+                        Physics, and Industrial Sciences
                     </li>
-                    <li><b>ISIMA</b> - Engineering School in CS</li>
-                    <li><b>University of Oklahoma</b> - MS Degree in CS</li>
+                    <li><b>ISIMA</b>: Engineering School in CS</li>
+                    <li><b>University of Oklahoma</b>: MS Degree in CS</li>
                 </ul>
             </div>
 
@@ -81,7 +81,9 @@ const blogLink = "https://blog.tristanbony.me";
                     <li>
                         <b>Video Games</b>: Portal, Trackmania, Rocket League
                     </li>
-                    <li><b>Travels:</b>USA, Europe, Russia, and many others</li>
+                    <li>
+                        <b>Travels</b>: USA, Europe, Russia, and many others
+                    </li>
                     <li>
                         <b>Other</b>: Movies, Series, Cats, FLOSS, Cars
                     </li>
