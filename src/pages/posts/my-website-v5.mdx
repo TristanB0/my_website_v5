@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 
-title: "My website v5 (WIP)"
+title: "My website v5"
 description: "The most recent version of my website in which I present my interest for IT and the different projects I have made throughout the years as well as some professional experiences."
 image:
   path: "/src/assets/card/website_v5.png"
@@ -12,7 +12,38 @@ from: 2022-02-02
 to: null
 duration: null
 link: "my_website_v5"
-tools: ["Astro", "TypeScript", "Tailwind CSS", "MDX"]
+tools: ["Astro", "TypeScript", "Tailwind", "MDX", "Zola"]
 ---
 
-(Work in progress)
+import { Image } from "astro:assets";
+
+In this fifth version, I decided to finally try a web framework to simplify some development.
+
+However, I had specifications in mind. First I wanted a MPA with SSR for performance reasons, allowing as few JavaScript as possible for the end user, removing frameworks such as React and Solid from my list. Yet, if needed, I wanted to still be able to add dynamic zones on the website and profit from the tools from the JS ecosystem, so I ended up using **Astro**. Then, I wanted to try **Tailwind**, which is very interesting to use, but I don't feel like it's that useful now that I've tested it, especially since CSS has improved a lot. My wish to use this framework eliminated Bootstrap from the other possibilities. I also needed **MDX** to write my posts. Finally, I've been using a component library called **daisyUI**, but I don't think I used it quite correctly. I also thought of using Kobalte for a while.
+
+Another great advantage of Astro is that it's optimized for everything measured by PageSpeed Insights: performance, accessiblity, best practices, SEO.
+
+import Screen_TristanB_v5_white from "../../assets/my_website_v5/Screen_TristanB_v5_white.png";
+
+<figure>
+  <Image src={Screen_TristanB_v5_white} alt="My website screen in white mode" />
+  <figcaption>White theme</figcaption>
+</figure>
+
+Rebuilding the website was also a reason to host it elsewhere. I currently publish with Vercel for their image size optimization. I tried to self-host it, but got many issues with my then setup. I'd like to try again soon though.
+
+import Screen_TristanB_v5_dark from "../../assets/my_website_v5/Screen_TristanB_v5_dark.png";
+
+<figure>
+  <Image src={Screen_TristanB_v5_dark} alt="My website screen in dark mode" />
+  <figcaption>Dark theme</figcaption>
+</figure>
+
+Finally, I've also started writing in a blog at the following address: [blog.tristanbony.me](https://blog.tristanbony.me). It's built using **Zola** with someone else's theme. The idea was also to keep it simple and lightweight.
+
+import Screen_TristanB_v5_mobile from "../../assets/my_website_v5/Screen_TristanB_v5_mobile.jpg";
+
+<figure>
+  <Image src={Screen_TristanB_v5_mobile} alt="Mobile version of my website in dark mode" />
+  <figcaption>Mobile version</figcaption>
+</figure>
